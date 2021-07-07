@@ -2,6 +2,11 @@
     <qresource prefix="/image">
         <file>mainmenu.png</file>
         <file>lvl1.png</file>
+        <file>lvl2.png</file>
+        <file>lvl3.png</file>
+        <file>lvl4.png</file>
+        <file>lvl5.png</file>
+        <file>lvl6.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>test.mp3</file>

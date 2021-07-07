@@ -11,6 +11,11 @@ CONFIG += c++11
 SOURCES += \
     Controller.cpp \
     Level1Button.cpp \
+    Level2button.cpp \
+    Level3Button.cpp \
+    Level4Button.cpp \
+    Level5Button.cpp \
+    Level6Button.cpp \
     Menu.cpp \
     View.cpp \
     main.cpp
@@ -18,6 +23,11 @@ SOURCES += \
 HEADERS += \
     Controller.h \
     Level1Button.h \
+    Level2button.h \
+    Level3Button.h \
+    Level4Button.h \
+    Level5Button.h \
+    Level6Button.h \
     Menu.h \
     View.h
 

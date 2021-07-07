@@ -7,6 +7,11 @@
 #include <QMediaPlayer>
 #include <QTimer>
 #include "Level1Button.h"
+#include "Level2Button.h"
+#include "Level3Button.h"
+#include "Level4Button.h"
+#include "Level5Button.h"
+#include "Level6Button.h"
 
 class Menu : public QGraphicsView
 {
@@ -19,6 +24,11 @@ private:
     QMediaPlayer * menuMusic;
     QTimer *menuTimer;
     Level1Button * lvl1;
+    Level2Button * lvl2;
+    Level3Button * lvl3;
+    Level4Button * lvl4;
+    Level5Button * lvl5;
+    Level6Button * lvl6;
 
 
 public:

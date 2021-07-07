@@ -21,13 +21,19 @@ Menu::Menu() : QGraphicsView()
     menuMusic->setMedia(QUrl("qrc:/music/test.mp3"));
     menuMusic->play();
 
-    //start Timer
+    // start Timer
     menuTimer = new QTimer();
     menuTimer->start(1000);
     connect(menuTimer , SIGNAL(timeout()) , this , SLOT(menuSchedule()));
 
-    // level 1
+    // levels
     lvl1 = new Level1Button(menuScene);
+    lvl2 = new Level2Button(menuScene);
+    lvl3 = new Level3Button(menuScene);
+    lvl4 = new Level4Button(menuScene);
+    lvl5 = new Level5Button(menuScene);
+    lvl6 = new Level6Button(menuScene);
+
 }
 
 Menu::~Menu()
@@ -41,7 +47,7 @@ void Menu::menuSchedule()
     if(menuMusic->state() == QMediaPlayer::StoppedState )
         menuMusic->play();
 
-    if(lvl1->click == true){
+    if(lvl1->click == true || lvl2->click == true || lvl3->click == true || lvl4->click == true || lvl5->click == true || lvl6->click == true){
         menuMusic->stop();
         this->close();
     }
