@@ -1,12 +1,13 @@
 #include <QApplication>
 #include "View.h"
+#include "Menu.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    auto myView = new View();
-    myView->show();
+    auto menu = new Menu();
+    menu->show();
 
     return a.exec();
 }

@@ -10,11 +10,13 @@ CONFIG += c++11
 
 SOURCES += \
     Controller.cpp \
+    Menu.cpp \
     View.cpp \
     main.cpp
 
 HEADERS += \
     Controller.h \
+    Menu.h \
     View.h
 
 # Default rules for deployment.
