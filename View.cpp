@@ -1,7 +1,10 @@
 #include "View.h"
 
-View::View() : QGraphicsView()
+View::View(int level) : QGraphicsView()
 {
+    // init level
+    this->level = level;
+
     // viewController
     viewController = new Controller();
 

@@ -5,6 +5,8 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QMediaPlayer>
+#include <QTimer>
+#include "Level1Button.h"
 
 class Menu : public QGraphicsView
 {
@@ -15,6 +17,9 @@ private:
 
     QGraphicsScene * menuScene;
     QMediaPlayer * menuMusic;
+    QTimer *menuTimer;
+    Level1Button * lvl1;
+
 
 public:
 
@@ -22,6 +27,10 @@ public:
     ~Menu();
 
 signals:
+
+public slots:
+
+    void menuSchedule();
 
 };
 

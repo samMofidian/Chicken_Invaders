@@ -10,12 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     Controller.cpp \
+    Level1Button.cpp \
     Menu.cpp \
     View.cpp \
     main.cpp
 
 HEADERS += \
     Controller.h \
+    Level1Button.h \
     Menu.h \
     View.h
 
