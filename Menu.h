@@ -12,6 +12,7 @@
 #include "Level4Button.h"
 #include "Level5Button.h"
 #include "Level6Button.h"
+#include "ExitButton.h"
 
 class Menu : public QGraphicsView
 {
@@ -29,6 +30,7 @@ private:
     Level4Button * lvl4;
     Level5Button * lvl5;
     Level6Button * lvl6;
+    ExitButton * exit;
 
 
 public:

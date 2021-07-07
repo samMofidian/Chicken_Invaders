@@ -3,6 +3,7 @@
 
 Level5Button::Level5Button(QGraphicsScene * scene) : level5Scene{scene}
 {
+    // init click
     click = false;
 
     // image
@@ -15,8 +16,8 @@ Level5Button::Level5Button(QGraphicsScene * scene) : level5Scene{scene}
     setPos(700, 50);
 
     // music
-//    level5ButtonMusic = new QMediaPlayer();
-//    level5ButtonMusic->setMedia(QUrl("qrc:/music/.mp3"));
+    level5ButtonMusic = new QMediaPlayer();
+    level5ButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
 }
 
 void Level5Button::mousePressEvent(QGraphicsSceneMouseEvent * event)

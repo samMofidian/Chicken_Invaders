@@ -7,8 +7,10 @@
         <file>lvl4.png</file>
         <file>lvl5.png</file>
         <file>lvl6.png</file>
+        <file>exit.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>test.mp3</file>
+        <file>click.mp3</file>
     </qresource>
 </RCC>

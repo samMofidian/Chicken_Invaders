@@ -34,6 +34,9 @@ Menu::Menu() : QGraphicsView()
     lvl5 = new Level5Button(menuScene);
     lvl6 = new Level6Button(menuScene);
 
+    // exit
+    exit = new ExitButton(menuScene);
+
 }
 
 Menu::~Menu()
@@ -47,7 +50,8 @@ void Menu::menuSchedule()
     if(menuMusic->state() == QMediaPlayer::StoppedState )
         menuMusic->play();
 
-    if(lvl1->click == true || lvl2->click == true || lvl3->click == true || lvl4->click == true || lvl5->click == true || lvl6->click == true){
+    if(lvl1->click == true || lvl2->click == true || lvl3->click == true
+            || lvl4->click == true || lvl5->click == true || lvl6->click == true || exit->click == true){
         menuMusic->stop();
         this->close();
     }

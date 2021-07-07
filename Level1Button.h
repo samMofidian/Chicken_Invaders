@@ -20,7 +20,7 @@ private:
 public:
 
     Level1Button(QGraphicsScene * scene);
-    void mousePressEvent(QGraphicsSceneMouseEvent * event);
     ~Level1Button();
+    void mousePressEvent(QGraphicsSceneMouseEvent * event);
 };
 #endif // LEVEL1BUTTON_H

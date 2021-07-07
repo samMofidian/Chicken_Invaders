@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     Controller.cpp \
+    ExitButton.cpp \
     Level1Button.cpp \
     Level2button.cpp \
     Level3Button.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 
 HEADERS += \
     Controller.h \
+    ExitButton.h \
     Level1Button.h \
     Level2button.h \
     Level3Button.h \
