@@ -3,7 +3,7 @@
 SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent), craftScene{craftScene}
 {
 
-    setPixmap(QPixmap(":/image/lvl1.png"));
+    setPixmap(QPixmap(":/image/SpaceCraft.png"));
     craftScene->addItem(this);
     setPos(550, 550);
 }
