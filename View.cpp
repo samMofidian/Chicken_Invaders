@@ -1,4 +1,5 @@
 #include "View.h"
+#include "SpaceCraft.h"
 
 View::View(int season, int level) : QGraphicsView()
 {
@@ -25,8 +26,11 @@ View::View(int season, int level) : QGraphicsView()
     viewPlayer->setMedia(QUrl("qrc:/music/level.mp3"));
     viewPlayer->play();
 
-    //init seconds
+    // init seconds
     sec = 0;
+
+
+
 }
 
 View::~View()

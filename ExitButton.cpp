@@ -12,7 +12,7 @@ ExitButton::ExitButton(QGraphicsScene * scene) : exitButtonScene{scene}
     // add to scene
     scene->addItem(this);
 
-    // Pos
+    // pos
     setPos(500, 650);
 
     // music

@@ -1,9 +1,10 @@
 #include "SpaceCraft.h"
 
-SpaceCraft::SpaceCraft()
+SpaceCraft::SpaceCraft(QGraphicsScene * craftScene) : craftScene{craftScene}
 {
-    lives = 3;
-    setPixmap(QPixmap(":/image/.png"));
+
+    setPixmap(QPixmap(":/image/lvl1.png"));
+    craftScene->addItem(this);
     setPos(600, 650);
 }
 
@@ -19,6 +20,6 @@ void SpaceCraft::keyPressEvent(QKeyEvent *event)
     }
     if (event->key() == Qt::Key_Space)
     {
-
+        exit(1);
     }
 }

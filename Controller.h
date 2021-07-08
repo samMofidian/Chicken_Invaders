@@ -6,6 +6,7 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsView>
 #include <QTimer>
+#include <SpaceCraft.h>
 
 class Controller : public QObject
 {
@@ -20,12 +21,14 @@ private:
     QGraphicsRectItem * holder;
     QTimer * ctimer;
     int season;
+    SpaceCraft * spaceCraft;
 
 
 public:
 
     explicit Controller(int season, QObject *parent = nullptr);
     ~Controller();
+    void addSpaceCraft();
 
 signals:
 

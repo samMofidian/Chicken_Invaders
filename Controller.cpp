@@ -20,3 +20,8 @@ Controller::~Controller()
     delete scene;
     delete ctimer;
 }
+
+void Controller::addSpaceCraft()
+{
+    spaceCraft = new SpaceCraft{scene, holder};
+}
