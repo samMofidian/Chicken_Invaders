@@ -9,6 +9,7 @@
 class SpaceCraft : public QObject , public QGraphicsPixmapItem
 {
 
+    Q_OBJECT
 
 private:
 
@@ -17,7 +18,7 @@ private:
 
 public:
 
-    SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent);
+    SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent = nullptr);
     void keyPressEvent(QKeyEvent * event);
     void decrementLive();
 

@@ -1,25 +1,29 @@
 #include "SpaceCraft.h"
 
-SpaceCraft::SpaceCraft(QGraphicsScene * craftScene) : craftScene{craftScene}
+SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent), craftScene{craftScene}
 {
 
     setPixmap(QPixmap(":/image/lvl1.png"));
     craftScene->addItem(this);
-    setPos(600, 650);
+    setPos(550, 550);
 }
 
-void SpaceCraft::keyPressEvent(QKeyEvent *event)
+void SpaceCraft::keyPressEvent(QKeyEvent * event)
 {
     if(event->key() == Qt::Key_Left)
     {
-        setPos(x()-15, y());
+        setPos(x() - 15, y());
     }
     if (event->key() == Qt::Key_Right)
     {
-        setPos(x()+15, y());
+        setPos(x() + 15, y());
     }
-    if (event->key() == Qt::Key_Space)
+    if (event->key() == Qt::Key_Up)
     {
-        exit(1);
+        setPos(x(), y() + 10);
+    }
+    if (event->key() == Qt::Key_Down)
+    {
+        setPos(x(), y() - 10);
     }
 }

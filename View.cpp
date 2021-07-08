@@ -21,7 +21,7 @@ View::View(int season, int level) : QGraphicsView()
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-    // bachground music
+    // background music
     viewPlayer = new QMediaPlayer();
     viewPlayer->setMedia(QUrl("qrc:/music/level.mp3"));
     viewPlayer->play();
@@ -29,8 +29,7 @@ View::View(int season, int level) : QGraphicsView()
     // init seconds
     sec = 0;
 
-
-
+    viewController->addSpaceCraft();
 }
 
 View::~View()
