@@ -13,7 +13,7 @@ View::View(int season, int level) : QGraphicsView()
     setScene(viewController->scene);
 
     // background image
-    setBackgroundBrush(QBrush(QImage(":/image/mainmenu.png")));
+    setBackgroundBrush(QBrush(QImage(":/image/back.jpg")));
 
     // fix size
     setFixedSize(1200, 750);
@@ -22,7 +22,7 @@ View::View(int season, int level) : QGraphicsView()
 
     // bachground music
     viewPlayer = new QMediaPlayer();
-    viewPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
+    viewPlayer->setMedia(QUrl("qrc:/music/level.mp3"));
     viewPlayer->play();
 
     //init seconds

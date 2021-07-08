@@ -3,7 +3,7 @@
 Controller::Controller(int season, QObject *parent) : QObject(parent)
 {
     // init season
-    this->season = season
+    this->season = season;
 
     // scene
     scene = new QGraphicsScene();
