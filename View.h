@@ -19,11 +19,12 @@ private:
     Controller * viewController;
     QMediaPlayer * viewPlayer;
     int level;
+    int season;
 
 
 public:
 
-    explicit View(int level);
+    explicit View(int season, int level);
     ~View();
 
 signals:

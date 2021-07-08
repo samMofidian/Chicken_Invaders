@@ -1,12 +1,13 @@
 #include "View.h"
 
-View::View(int level) : QGraphicsView()
+View::View(int season, int level) : QGraphicsView()
 {
-    // init level
+    // init level & season
     this->level = level;
+    this->season = season;
 
     // viewController
-    viewController = new Controller();
+    viewController = new Controller(season);
 
     // scene
     setScene(viewController->scene);

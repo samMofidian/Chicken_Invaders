@@ -1,7 +1,9 @@
 #include "Controller.h"
 
-Controller::Controller(QObject *parent) : QObject(parent)
+Controller::Controller(int season, QObject *parent) : QObject(parent)
 {
+    // init season
+    this->season = season
 
     // scene
     scene = new QGraphicsScene();

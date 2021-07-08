@@ -19,11 +19,12 @@ private:
     QGraphicsScene * scene;
     QGraphicsRectItem * holder;
     QTimer * ctimer;
+    int season;
 
 
 public:
 
-    explicit Controller(QObject *parent = nullptr);
+    explicit Controller(int season, QObject *parent = nullptr);
     ~Controller();
 
 signals:
