@@ -7,6 +7,8 @@
 #include <QGraphicsView>
 #include <QTimer>
 #include <SpaceCraft.h>
+#include <Score.h>
+
 
 class Controller : public QObject
 {
@@ -22,6 +24,7 @@ private:
     QTimer * ctimer;
     int season;
     SpaceCraft * spaceCraft;
+    Score * score;
 
 
 public:

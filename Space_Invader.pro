@@ -20,6 +20,7 @@ SOURCES += \
     Level5Button.cpp \
     Level6Button.cpp \
     Menu.cpp \
+    Score.cpp \
     SpaceCraft.cpp \
     View.cpp \
     main.cpp
@@ -36,6 +37,7 @@ HEADERS += \
     Level5Button.h \
     Level6Button.h \
     Menu.h \
+    Score.h \
     SpaceCraft.h \
     View.h
 

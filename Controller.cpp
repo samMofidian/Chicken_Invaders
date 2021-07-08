@@ -13,6 +13,18 @@ Controller::Controller(int season, QObject *parent) : QObject(parent)
     holder = new QGraphicsRectItem();
     holder->setRect(0, 0, 1200, 750);
 
+    // score
+    score = new Score();
+    scene->addItem(score);
+    score->setPos(1140, 700);
+
+    // space craft
+//    spaceCraft = new SpaceCraft(scene);
+//    scene->addItem(spaceCraft);
+//    // focus
+//    spaceCraft->setFlag(QGraphicsItem::ItemIsFocusable);
+//    spaceCraft->setFocus();
+
 }
 
 void Controller::addSpaceCraft()
