@@ -23,7 +23,7 @@ View::View(int season, int level) : QGraphicsView()
 
     // background music
     viewPlayer = new QMediaPlayer();
-    viewPlayer->setMedia(QUrl("qrc:/music/level.mp3"));
+    viewPlayer->setMedia(QUrl("qrc:/music/leve.mp3"));
     viewPlayer->play();
 
     // init seconds

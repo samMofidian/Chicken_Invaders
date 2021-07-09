@@ -21,7 +21,6 @@ private:
     int level;
     int season;
 
-
 public:
 
     explicit View(int season, int level);

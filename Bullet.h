@@ -12,11 +12,16 @@ class Bullet : public QObject, public QGraphicsPixmapItem
 
 private:
 
-    int velocity;
+    QTimer * btimer;
 
 public:
 
-    explicit Bullet(const int & velocity, QGraphicsItem * parent = nullptr);
+    explicit Bullet(QGraphicsItem * parent = nullptr);
+
+signals:
+
+public slots:
+
     void moveToUp();
 
 };

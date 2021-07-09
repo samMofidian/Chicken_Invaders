@@ -5,6 +5,7 @@
 #include <QGraphicsPixmapItem>
 #include <QKeyEvent>
 #include <QGraphicsScene>
+#include "Bullet.h"
 
 class SpaceCraft : public QObject , public QGraphicsPixmapItem
 {
@@ -15,16 +16,21 @@ private:
 
     int lives;
     QGraphicsScene * craftScene;
+    bool click;
 
 public:
 
     SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent = nullptr);
     void keyPressEvent(QKeyEvent * event);
     void decrementLive();
+    void mousePressEvent(QGraphicsSceneMouseEvent * event);
+    QTimer * stimer;
+    Bullet * bullet;
 
 signals:
 
 public slots:
+
 
 };
 
