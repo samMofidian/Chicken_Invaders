@@ -22,6 +22,10 @@ public:
     void keyPressEvent(QKeyEvent * event);
     void decrementLive();
 
+signals:
+
+public slots:
+
 };
 
 #endif // SPACECRAFT_H

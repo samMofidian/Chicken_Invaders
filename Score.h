@@ -6,7 +6,7 @@
 class Score : public QGraphicsTextItem
 {
 
-    friend class Sun;
+    friend class Chicken;
 
 private:
 

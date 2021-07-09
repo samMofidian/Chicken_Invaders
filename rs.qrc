@@ -10,6 +10,7 @@
         <file>exit.png</file>
         <file>back.jpg</file>
         <file>SpaceCraft.png</file>
+        <file>bullet.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>test.mp3</file>

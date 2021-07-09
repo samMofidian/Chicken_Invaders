@@ -2,14 +2,22 @@
 #define BULLET_H
 
 #include <QObject>
+#include <QGraphicsPixmapItem>
+#include <QTimer>
 
-class Bullet : public QObject
+class Bullet : public QObject, public QGraphicsPixmapItem
 {
-    Q_OBJECT
-public:
-    explicit Bullet(QObject *parent = nullptr);
 
-signals:
+    Q_OBJECT
+
+private:
+
+    int velocity;
+
+public:
+
+    explicit Bullet(const int & velocity, QGraphicsItem * parent = nullptr);
+    void moveToUp();
 
 };
 

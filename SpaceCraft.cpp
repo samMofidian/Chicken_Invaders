@@ -1,4 +1,6 @@
 #include "SpaceCraft.h"
+#include "Bullet.h"
+#include <QGraphicsScene>
 
 SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent), craftScene{craftScene}
 {
@@ -10,7 +12,7 @@ SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QOb
 
 void SpaceCraft::keyPressEvent(QKeyEvent * event)
 {
-    if(event->key() == Qt::Key_Left)
+    if (event->key() == Qt::Key_Left)
     {
         setPos(x() - 15, y());
     }
@@ -25,5 +27,11 @@ void SpaceCraft::keyPressEvent(QKeyEvent * event)
     if (event->key() == Qt::Key_Down)
     {
         setPos(x(), y() - 10);
+    }
+    if (event->key() == Qt::Key_Space)
+    {
+        auto bullet = new Bullet(25);
+        bullet->setPos(x() + 40, y() + 50);
+        scene()->addItem(bullet);
     }
 }

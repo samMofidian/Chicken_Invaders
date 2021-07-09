@@ -29,7 +29,7 @@ View::View(int season, int level) : QGraphicsView()
     // init seconds
     sec = 0;
 
-    //viewController->addSpaceCraft();
+    viewController->addSpaceCraft();
 }
 
 View::~View()
