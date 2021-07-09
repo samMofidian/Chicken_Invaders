@@ -5,7 +5,7 @@ Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem *parent) : Q
     QGraphicsPixmapItem (parent), giftScene(giftScene), timeIntervals{0}
 {
     // image
-    setPixmap(QPixmap(":/image/lvl1.png"));
+    setPixmap(QPixmap(":/image/gift.png"));
 
     // add to scene
     giftScene->addItem(this);
@@ -18,9 +18,9 @@ Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem *parent) : Q
 void Gift::move()
 {
    ++timeIntervals;
-    setPos(x() , y() + 45);
+    setPos(x() , y() + 35);
 
-    if(timeIntervals == 15 || y() > 735)
+    if(timeIntervals == 20 || y() > 735)
     {
         giftScene->removeItem(this);
         delete this;
