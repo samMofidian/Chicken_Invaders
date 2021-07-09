@@ -27,6 +27,7 @@ public:
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
     QTimer * stimer;
     Bullet * bullet;
+    int shotType;
 
 signals:
 

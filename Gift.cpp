@@ -1,5 +1,6 @@
 /* written & directed by sAm mofidian */
 #include "Gift.h"
+#include "SpaceCraft.h"
 
 Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem *parent) : QObject(),
     QGraphicsPixmapItem (parent), giftScene(giftScene), timeIntervals{0}
@@ -12,12 +13,26 @@ Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem *parent) : Q
     setPos(rand() % 1100, 0);
 
     // connect timer to move
-    connect(timer , SIGNAL(timeout()) , this , SLOT(move()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(move()));
 }
 
 void Gift::move()
 {
-   ++timeIntervals;
+    QList < QGraphicsItem * > collidingList = collidingItems();
+
+     // change bullet type
+     for(size_t i{0} ; i < collidingList.size();++i){
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
+            ( dynamic_cast<SpaceCraft *>(collidingList[i]))->setBullet(1);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
+
+    ++timeIntervals;
     setPos(x() , y() + 35);
 
     if(timeIntervals == 20 || y() > 735)

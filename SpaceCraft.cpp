@@ -13,6 +13,9 @@ SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QOb
     craftScene->addItem(this);
     setPos(550, 560);
 
+    // init shot type
+    shotType = 0;
+
 }
 
 void SpaceCraft::keyPressEvent(QKeyEvent * event)

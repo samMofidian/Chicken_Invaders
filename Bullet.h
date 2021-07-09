@@ -18,6 +18,7 @@ private:
 public:
 
     explicit Bullet(QGraphicsItem * parent = nullptr);
+    void setBullet(int t);
 
 signals:
 

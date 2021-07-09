@@ -1,4 +1,4 @@
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */
 #include "Level2button.h"
 #include "View.h"
 
@@ -35,4 +35,4 @@ Level2Button::~Level2Button()
     delete level2ButtonMusic;
 }
 
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */
