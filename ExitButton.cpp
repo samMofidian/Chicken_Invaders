@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian*/
 #include "ExitButton.h"
 #include "View.h"
 
@@ -34,3 +35,4 @@ void ExitButton::mousePressEvent(QGraphicsSceneMouseEvent * event)
     exit(1);
 }
 
+/* written & directed by sAm mofidian*/

@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #include "Level4Button.h"
 #include "View.h"
 
@@ -33,3 +34,5 @@ Level4Button::~Level4Button()
     delete level4Scene;
     delete level4ButtonMusic;
 }
+
+/* written & directed by sAm mofidian */

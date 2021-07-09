@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef SCORE_H
 #define SCORE_H
 
@@ -21,3 +22,5 @@ public:
 };
 
 #endif // SCORE_H
+
+/* written & directed by sAm mofidian*/

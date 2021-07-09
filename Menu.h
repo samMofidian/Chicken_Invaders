@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef MENU_H
 #define MENU_H
 
@@ -47,3 +48,5 @@ public slots:
 };
 
 #endif // MENU_H
+
+/* written & directed by sAm mofidian*/

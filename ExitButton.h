@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef EXITBUTTON_H
 #define EXITBUTTON_H
 
@@ -25,3 +26,5 @@ public:
 };
 
 #endif // EXITBUTTON_H
+
+/* written & directed by sAm mofidian*/

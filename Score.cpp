@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian*/
 #include "Score.h"
 #include <QFont>
 
@@ -29,3 +30,5 @@ void Score::setScore(int score)
     setDefaultTextColor(Qt::white);
     setFont(QFont("times", 18));
 }
+
+/* written & directed by sAm mofidian*/

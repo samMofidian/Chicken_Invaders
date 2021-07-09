@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef BULLET_H
 #define BULLET_H
 
@@ -27,3 +28,5 @@ public slots:
 };
 
 #endif // BULLET_H
+
+/* written & directed by sAm mofidian */

@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #include "Controller.h"
 
 Controller::Controller(int season, QObject *parent) : QObject(parent)

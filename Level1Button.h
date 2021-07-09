@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef LEVEL1BUTTON_H
 #define LEVEL1BUTTON_H
 
@@ -24,3 +25,5 @@ public:
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
 };
 #endif // LEVEL1BUTTON_H
+
+/* written & directed by sAm mofidian*/

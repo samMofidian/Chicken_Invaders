@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef VIEW_H
 #define VIEW_H
 
@@ -31,3 +32,5 @@ signals:
 };
 
 #endif // VIEW_H
+
+/* written & directed by sAm mofidian */

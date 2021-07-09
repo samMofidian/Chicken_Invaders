@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian*/
 #include "View.h"
 #include "SpaceCraft.h"
 
@@ -38,3 +39,5 @@ View::~View()
     delete viewPlayer;
     delete viewController;
 }
+
+/* written & directed by sAm mofidian*/

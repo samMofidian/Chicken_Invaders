@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
@@ -38,3 +39,5 @@ signals:
 };
 
 #endif // CONTROLLER_H
+
+/* written & directed by sAm mofidian */

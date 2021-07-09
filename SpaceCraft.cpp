@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian*/
 #include "SpaceCraft.h"
 #include "Bullet.h"
 #include <QGraphicsScene>
@@ -52,4 +53,6 @@ void SpaceCraft::mousePressEvent(QGraphicsSceneMouseEvent * event)
     bullet->setPos(x() + 40, y() - 40);
     scene()->addItem(bullet);
 }
+
+/* written & directed by sAm mofidian*/
 

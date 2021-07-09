@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian*/
 #include "Bullet.h"
 #include <QGraphicsScene>
 
@@ -30,3 +31,5 @@ void Bullet::moveToUp()
     }
 
 }
+
+/* written & directed by sAm mofidian*/

@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef SPACECRAFT_H
 #define SPACECRAFT_H
 
@@ -35,3 +36,5 @@ public slots:
 };
 
 #endif // SPACECRAFT_H
+
+/* written & directed by sAm mofidian*/

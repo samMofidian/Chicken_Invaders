@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian*/
 #include "Menu.h"
 
 Menu::Menu() : QGraphicsView()
@@ -56,3 +57,5 @@ void Menu::menuSchedule()
         this->close();
     }
 }
+
+/* written & directed by sAm mofidian*/
