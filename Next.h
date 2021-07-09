@@ -1,32 +1,30 @@
 /* written & directed by sAm mofidian */
-#ifndef REPLAY_H
-#define REPLAY_H
+#ifndef NEXT_H
+#define NEXT_H
 
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include <QMediaPlayer>
 #include <QGraphicsSceneMouseEvent>
 
-class Replay : public QGraphicsPixmapItem
+class Next : public QGraphicsPixmapItem
 {
 
 
 private:
 
-    int season;
     int level;
     bool click;
-    QGraphicsScene * replayScene;
-    QMediaPlayer * replayMusic;
+    QGraphicsScene * nextScene;
+    QMediaPlayer * nextMusic;
 
 public:
 
-    Replay(QGraphicsScene * scene, int season, int level);
+    Next(QGraphicsScene * scene, int level);
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
-    ~Replay();
-
+    ~Next();
 };
 
-#endif // REPLAY_H
+#endif // NEXT_H
 
 /* written & directed by sAm mofidian */

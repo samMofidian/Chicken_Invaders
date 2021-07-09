@@ -113,7 +113,7 @@ void View::schedule()
         QGraphicsPixmapItem * gameOver = new QGraphicsPixmapItem();
         gameOver->setPixmap(QPixmap(":/image/"));
         viewController->scene->addItem(gameOver);
-        gameOver->setPos(0,0);
+        gameOver->setPos(0, 0);
         replayButton = new Replay(viewController->scene, season, level);
 
     }

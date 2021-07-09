@@ -1,4 +1,4 @@
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */
 #include "Score.h"
 #include <QFont>
 
@@ -31,4 +31,4 @@ void Score::setScore(int score)
     setFont(QFont("times", 18));
 }
 
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */
