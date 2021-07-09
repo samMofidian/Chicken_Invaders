@@ -30,6 +30,10 @@ View::View(int season, int level) : QGraphicsView()
     // init seconds
     sec = 0;
 
+    // game over music
+    gameOverMusic = new QMediaPlayer();
+    gameOverMusic->setMedia(QUrl("qrc:/music/.mp3"));
+
     // stat Timer
     vtimer = new QTimer();
     vtimer->start(500);
@@ -38,6 +42,12 @@ View::View(int season, int level) : QGraphicsView()
     connect(vtimer , SIGNAL(timeout()) , this , SLOT(schedule()));
 
     viewController->addSpaceCraft();
+}
+
+void View::pause()
+{
+    vtimer->stop();
+    viewController->ctimer->stop();
 }
 
 View::~View()
@@ -94,6 +104,19 @@ void View::schedule()
         sec += 750;
     }
 
+    // loose game
+    if(viewController->game_over()==true)
+    {
+        pause();
+        viewPlayer->stop();
+        gameOverMusic->play();
+        QGraphicsPixmapItem * gameOver = new QGraphicsPixmapItem();
+        gameOver->setPixmap(QPixmap(":/image/"));
+        viewController->scene->addItem(gameOver);
+        gameOver->setPos(0,0);
+        replayButton = new Replay(viewController->scene, season, level);
+
+    }
 }
 
 /* written & directed by sAm mofidian */

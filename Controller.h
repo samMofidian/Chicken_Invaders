@@ -35,6 +35,7 @@ public:
     ~Controller();
     void addSpaceCraft();
     void addGift();
+    bool game_over();
 
 signals:
 

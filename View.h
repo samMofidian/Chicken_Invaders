@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <QMediaPlayer>
 #include "Controller.h"
+#include "Replay.h"
 
 class View : public QGraphicsView
 {
@@ -19,12 +20,15 @@ private:
     int sec;
     Controller * viewController;
     QMediaPlayer * viewPlayer;
+    QMediaPlayer *gameOverMusic;
     int level;
     int season;
+    Replay * replayButton;
 
 public:
 
     explicit View(int season, int level);
+    void pause();
     ~View();
 
 signals:

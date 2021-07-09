@@ -38,6 +38,13 @@ void Controller::addGift()
     giftList.push_back(new Gift{scene, ctimer, holder});
 }
 
+bool Controller::game_over()
+{
+    if (getLives() < 1)
+        return true;
+    return false;
+}
+
 Controller::~Controller()
 {
     delete holder;
