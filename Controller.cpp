@@ -19,6 +19,10 @@ Controller::Controller(int season, QObject *parent) : QObject(parent)
     scene->addItem(score);
     score->setPos(1140, 700);
 
+    // timer
+    ctimer = new QTimer();
+    ctimer->start(40);
+
 }
 
 void Controller::addSpaceCraft()
@@ -27,6 +31,11 @@ void Controller::addSpaceCraft()
     // focus
     spaceCraft->setFlag(QGraphicsItem::ItemIsFocusable);
     spaceCraft->setFocus();
+}
+
+void Controller::addGift()
+{
+    giftList.push_back(new Gift{scene, ctimer, holder});
 }
 
 Controller::~Controller()

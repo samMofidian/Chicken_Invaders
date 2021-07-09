@@ -13,6 +13,7 @@ SOURCES += \
     Chicken1.cpp \
     Controller.cpp \
     ExitButton.cpp \
+    Gift.cpp \
     Level1Button.cpp \
     Level2button.cpp \
     Level3Button.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     Chicken1.h \
     Controller.h \
     ExitButton.h \
+    Gift.h \
     Level1Button.h \
     Level2button.h \
     Level3Button.h \

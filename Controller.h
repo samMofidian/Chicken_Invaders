@@ -9,6 +9,7 @@
 #include <QTimer>
 #include <SpaceCraft.h>
 #include <Score.h>
+#include <Gift.h>
 
 
 class Controller : public QObject
@@ -26,13 +27,14 @@ private:
     int season;
     SpaceCraft * spaceCraft;
     Score * score;
-
+    QList<Gift *> giftList;
 
 public:
 
     explicit Controller(int season, QObject *parent = nullptr);
     ~Controller();
     void addSpaceCraft();
+    void addGift();
 
 signals:
 

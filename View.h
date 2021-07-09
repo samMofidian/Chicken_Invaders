@@ -29,6 +29,10 @@ public:
 
 signals:
 
+public slots:
+
+    void schedule();
+
 };
 
 #endif // VIEW_H
