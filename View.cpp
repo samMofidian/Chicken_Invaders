@@ -76,17 +76,25 @@ void View::schedule()
 
 //    }
 
-//    // level 3
-//    if (season == 2 && level == 3)
-//    {
+    // level 3
+    if (season == 2 && level == 3)
+    {
+        if(sec != 0 && sec % 800 == 0)
+        {
+            viewController->addEgg();
+        }
+        sec += 100;
+    }
 
-//    }
-
-//    // level 4
-//    if (season == 2 && level == 4)
-//    {
-
-//    }
+    // level 4
+    if (season == 2 && level == 4)
+    {
+        if(sec != 0 && sec % 800 == 0)
+        {
+            viewController->addEgg();
+        }
+        sec += 100;
+    }
 
     // level 5
     if (season == 3 && level == 5)

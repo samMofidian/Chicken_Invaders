@@ -22,8 +22,8 @@ private:
     int sec;
     Controller * viewController;
     QMediaPlayer * viewPlayer;
-    QMediaPlayer *gameOverMusic;
-    QMediaPlayer *winMusic;
+    QMediaPlayer * gameOverMusic;
+    QMediaPlayer * winMusic;
     int level;
     int season;
     Replay * replayButton;

@@ -10,6 +10,7 @@
 #include <SpaceCraft.h>
 #include <Score.h>
 #include <Gift.h>
+#include <Egg.h>
 
 
 class Controller : public QObject
@@ -28,6 +29,7 @@ private:
     SpaceCraft * spaceCraft;
     Score * score;
     QList<Gift *> giftList;
+    QList<Egg *> eggList;
 
 public:
 
@@ -35,6 +37,7 @@ public:
     ~Controller();
     void addSpaceCraft();
     void addGift();
+    void addEgg();
     bool game_over();
 
 signals:

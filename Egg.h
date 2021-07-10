@@ -1,33 +1,34 @@
 /* written & directed by sAm mofidian */
-#ifndef GIFT_H
-#define GIFT_H
+#ifndef EGG_H
+#define EGG_H
 
 #include <QObject>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 #include <QTimer>
 
-class Gift : public QObject, public QGraphicsPixmapItem
+class Egg : public QObject, public QGraphicsPixmapItem
 {
 
     Q_OBJECT
 
 private:
 
-    QGraphicsScene * giftScene;
+    QGraphicsScene * eggScene;
     int timeIntervals;
 
 public:
-    explicit Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem * parent = nullptr);
+
+    explicit Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent = nullptr);
 
 signals:
 
 public slots:
 
-    void move();
+    void fall();
 
 };
 
-#endif // GIFT_H
+#endif // EGG_H
 
 /* written & directed by sAm mofidian */

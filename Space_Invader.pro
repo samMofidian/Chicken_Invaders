@@ -12,6 +12,7 @@ SOURCES += \
     Bullet.cpp \
     Chicken1.cpp \
     Controller.cpp \
+    Egg.cpp \
     ExitButton.cpp \
     Gift.cpp \
     Home.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     Bullet.h \
     Chicken1.h \
     Controller.h \
+    Egg.h \
     ExitButton.h \
     Gift.h \
     Home.h \

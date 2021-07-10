@@ -2,8 +2,8 @@
 #include "Gift.h"
 #include "SpaceCraft.h"
 
-Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem *parent) : QObject(),
-    QGraphicsPixmapItem (parent), giftScene(giftScene), timeIntervals{0}
+Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem * parent) : QObject(),
+    QGraphicsPixmapItem(parent), giftScene(giftScene), timeIntervals{0}
 {
     // image
     setPixmap(QPixmap(":/image/gift.png"));

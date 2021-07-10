@@ -16,6 +16,7 @@
         <file>replay.png</file>
         <file>home.png</file>
         <file>bullet2.png</file>
+        <file>egg.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>test.mp3</file>
