@@ -10,7 +10,7 @@ Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : Q
 
     // add to scene
     eggScene->addItem(this);
-    setPos((rand() % 800) + 200, 0);
+    setPos((rand() % 800) + 200, 175);
 
     // connect timer to fall
     connect(etimer, SIGNAL(timeout()), this, SLOT(fall()));
@@ -21,7 +21,7 @@ void Egg::fall()
     QList <QGraphicsItem *> collidingList = collidingItems();
 
      // decrement live
-     for(size_t i{0} ; i < collidingList.size();++i){
+     for(size_t i{0}; i < collidingList.size(); ++i){
          if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
             ( dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
 
