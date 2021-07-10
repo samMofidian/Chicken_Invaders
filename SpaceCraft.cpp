@@ -78,5 +78,10 @@ void SpaceCraft::changeShotType()
     shotType = 2;
 }
 
+int SpaceCraft::getLives()
+{
+    return lives;
+}
+
 /* written & directed by sAm mofidian*/
 

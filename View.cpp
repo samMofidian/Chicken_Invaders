@@ -116,7 +116,7 @@ void View::schedule()
         }
         sec += 750;
     }
-/*
+
     // loose game
     if(viewController->game_over()==true)
     {
@@ -136,9 +136,9 @@ void View::schedule()
         homeButton = new Home(viewController->scene);
 
     }
-
+/*
     // win game
-    if(viewController->game_over() == false)
+    if(viewController->game_over() == false && sec > 100000)
     {
         // stop game
         pause();

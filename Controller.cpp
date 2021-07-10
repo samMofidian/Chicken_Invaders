@@ -1,5 +1,6 @@
 /* written & directed by sAm mofidian */
 #include "Controller.h"
+#include "SpaceCraft.h"
 
 Controller::Controller(int season, QObject *parent) : QObject(parent)
 {
@@ -46,9 +47,10 @@ void Controller::addEgg()
 
 bool Controller::game_over()
 {
-    if (getLives() < 1)
+    if (spaceCraft->getLives() < 1)
         return true;
-    return true;
+
+    return false;
 }
 
 Controller::~Controller()

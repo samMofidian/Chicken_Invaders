@@ -11,6 +11,8 @@
 class SpaceCraft : public QObject , public QGraphicsPixmapItem
 {
 
+    friend class Controller;
+
     Q_OBJECT
 
 private:
@@ -30,6 +32,7 @@ public:
     void setBullet();
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
     void changeShotType();
+    int getLives();
 
 signals:
 
