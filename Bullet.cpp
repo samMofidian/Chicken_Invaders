@@ -18,6 +18,21 @@ Bullet::Bullet(QGraphicsItem * parent) : QObject(),
     btimer->start(45);
 }
 
+Bullet::Bullet(int t)
+{
+    // image
+    setPixmap(QPixmap(":/image/bullet2.png"));
+
+    // make timer
+    btimer = new QTimer(this);
+
+    // connect to moveToUp
+    connect(btimer , SIGNAL(timeout()) ,this , SLOT(moveToUp()));
+
+    // start timer
+    btimer->start(45);
+}
+
 void Bullet::moveToUp()
 {
 

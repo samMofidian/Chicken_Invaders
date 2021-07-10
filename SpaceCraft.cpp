@@ -13,8 +13,7 @@ SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QOb
     craftScene->addItem(this);
     setPos(550, 560);
 
-    // init shot type
-    shotType = 0;
+    shotType = 1;
 
 }
 
@@ -42,10 +41,19 @@ void SpaceCraft::keyPressEvent(QKeyEvent * event)
     }
     else if (event->key() == Qt::Key_Space)
     {
-        bullet = new Bullet();
-        bullet->setPos(x() + 40, y() - 40);
-        scene()->addItem(bullet);
-        //qInfo() << "shot";
+        if (shotType == 1)
+        {
+            bullet = new Bullet();
+            bullet->setPos(x() + 40, y() - 40);
+            scene()->addItem(bullet);
+            //qInfo() << "shot";
+        }
+        if (shotType == 2)
+        {
+            bullet = new Bullet(1);
+            bullet->setPos(x() + 30, y() - 40);
+            scene()->addItem(bullet);
+        }
     }
 }
 
@@ -55,6 +63,11 @@ void SpaceCraft::mousePressEvent(QGraphicsSceneMouseEvent * event)
     bullet = new Bullet();
     bullet->setPos(x() + 40, y() - 40);
     scene()->addItem(bullet);
+}
+
+void SpaceCraft::changeShotType()
+{
+    shotType = 2;
 }
 
 /* written & directed by sAm mofidian*/

@@ -18,16 +18,18 @@ private:
     int lives;
     QGraphicsScene * craftScene;
     bool click;
+    int shotType;
+    QTimer * stimer;
+    Bullet * bullet;
 
 public:
 
     SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent = nullptr);
     void keyPressEvent(QKeyEvent * event);
     void decrementLive();
+    void setBullet();
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
-    QTimer * stimer;
-    Bullet * bullet;
-    int shotType;
+    void changeShotType();
 
 signals:
 

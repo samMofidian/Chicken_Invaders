@@ -19,7 +19,6 @@ ExitButton::ExitButton(QGraphicsScene * scene) : exitButtonScene{scene}
     // music
     exitButtonMusic = new QMediaPlayer();
     exitButtonMusic->setMedia(QUrl("qrc:/music/click.mp3"));
-
 }
 
 ExitButton::~ExitButton()

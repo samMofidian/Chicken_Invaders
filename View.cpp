@@ -122,7 +122,7 @@ void View::schedule()
         viewController->scene->addItem(gameOver);
         gameOver->setPos(0, 0);
 
-        // buttons
+        // replay and home buttons
         replayButton = new Replay(viewController->scene, season, level);
         homeButton = new Home(viewController->scene);
 
@@ -142,12 +142,12 @@ void View::schedule()
         viewController->scene->addItem(win);
         win->setPos(0,0);
 
-        // button
+        // home button
         homeButton = new Home(viewController->scene);
 
         if(level!=6)
         {
-            // button
+            // next button
             nextButton = new Next(viewController->scene , level);
         }
     }
