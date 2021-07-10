@@ -107,7 +107,7 @@ void View::schedule()
         }
         sec += 750;
     }
-
+/*
     // loose game
     if(viewController->game_over()==true)
     {
@@ -129,7 +129,7 @@ void View::schedule()
     }
 
     // win game
-    if(viewController->game_over() == false && )
+    if(viewController->game_over() == false)
     {
         // stop game
         pause();
@@ -151,7 +151,7 @@ void View::schedule()
             nextButton = new Next(viewController->scene , level);
         }
     }
-
+*/
 }
 
 /* written & directed by sAm mofidian */

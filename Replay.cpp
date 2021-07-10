@@ -14,7 +14,7 @@ Replay::Replay(QGraphicsScene * scene, int season, int level) : replayScene{scen
     scene->addItem(this);
 
     // pos
-    setPos(375, 625);
+    setPos(625, 575);
 
     // music
     replayMusic = new QMediaPlayer();

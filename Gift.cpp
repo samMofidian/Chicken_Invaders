@@ -18,24 +18,24 @@ Gift::Gift(QGraphicsScene *giftScene, QTimer * timer, QGraphicsItem *parent) : Q
 
 void Gift::move()
 {
-    QList < QGraphicsItem * > collidingList = collidingItems();
+//    QList < QGraphicsItem * > collidingList = collidingItems();
 
-     // change bullet type
-     for(size_t i{0} ; i < collidingList.size();++i){
-         if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
-            ( dynamic_cast<SpaceCraft *>(collidingList[i]))->setBullet(1);
+//     // change bullet type
+//     for(size_t i{0} ; i < collidingList.size();++i){
+//         if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
+//            ( dynamic_cast<SpaceCraft *>(collidingList[i]))->setBullet(1);
 
-            // delete
-            scene()->removeItem(this);
-            delete this;
-            return;
-         }
-     }
+//            // delete
+//            scene()->removeItem(this);
+//            delete this;
+//            return;
+//         }
+//     }
 
     ++timeIntervals;
-    setPos(x() , y() + 35);
+    setPos(x() , y() + 30);
 
-    if(timeIntervals == 20 || y() > 735)
+    if(timeIntervals == 22 || y() > 745)
     {
         giftScene->removeItem(this);
         delete this;

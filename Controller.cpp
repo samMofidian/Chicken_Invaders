@@ -17,7 +17,7 @@ Controller::Controller(int season, QObject *parent) : QObject(parent)
     // score
     score = new Score();
     scene->addItem(score);
-    score->setPos(1140, 700);
+    score->setPos(30, 10);
 
     // timer
     ctimer = new QTimer();
@@ -38,12 +38,12 @@ void Controller::addGift()
     giftList.push_back(new Gift{scene, ctimer, holder});
 }
 
-bool Controller::game_over()
-{
-    if (getLives() < 1)
-        return true;
-    return false;
-}
+//bool Controller::game_over()
+//{
+//    if (getLives() < 1)
+//        return true;
+//    return true;
+//}
 
 Controller::~Controller()
 {
