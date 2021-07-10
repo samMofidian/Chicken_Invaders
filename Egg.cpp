@@ -1,5 +1,6 @@
 /* written & directed by sAm mofidian */
 #include "Egg.h"
+#include "SpaceCraft.h"
 
 Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : QObject(),
     QGraphicsPixmapItem(parent), eggScene(eggScene), timeIntervals{0}
@@ -17,6 +18,20 @@ Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : Q
 
 void Egg::fall()
 {
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0} ; i < collidingList.size();++i){
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
+            ( dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
+
     ++timeIntervals;
     setPos(x() , y() + 25);
 

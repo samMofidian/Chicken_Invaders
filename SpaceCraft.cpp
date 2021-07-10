@@ -13,8 +13,11 @@ SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QOb
     craftScene->addItem(this);
     setPos(550, 560);
 
+    // init shot type
     shotType = 1;
 
+    // init lives
+    lives = 3;
 }
 
 void SpaceCraft::keyPressEvent(QKeyEvent * event)
@@ -55,6 +58,11 @@ void SpaceCraft::keyPressEvent(QKeyEvent * event)
             scene()->addItem(bullet);
         }
     }
+}
+
+void SpaceCraft::decrementLive()
+{
+    --lives;
 }
 
 void SpaceCraft::mousePressEvent(QGraphicsSceneMouseEvent * event)

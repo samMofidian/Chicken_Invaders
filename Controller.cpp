@@ -44,12 +44,12 @@ void Controller::addEgg()
 }
 
 
-//bool Controller::game_over()
-//{
-//    if (getLives() < 1)
-//        return true;
-//    return true;
-//}
+bool Controller::game_over()
+{
+    if (getLives() < 1)
+        return true;
+    return true;
+}
 
 Controller::~Controller()
 {

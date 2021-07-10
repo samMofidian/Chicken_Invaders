@@ -45,6 +45,7 @@ View::View(int season, int level) : QGraphicsView()
     // connect to schedule
     connect(vtimer , SIGNAL(timeout()) , this , SLOT(schedule()));
 
+    // add space craft
     viewController->addSpaceCraft();
 }
 
