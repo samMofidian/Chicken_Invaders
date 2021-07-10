@@ -14,6 +14,7 @@ SOURCES += \
     Controller.cpp \
     ExitButton.cpp \
     Gift.cpp \
+    Home.cpp \
     Level1Button.cpp \
     Level2button.cpp \
     Level3Button.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     Controller.h \
     ExitButton.h \
     Gift.h \
+    Home.h \
     Level1Button.h \
     Level2button.h \
     Level3Button.h \

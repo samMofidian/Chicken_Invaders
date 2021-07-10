@@ -33,31 +33,31 @@ void Next::mousePressEvent(QGraphicsSceneMouseEvent * event)
 
     if(level == 1)
     {
-         auto myView = new View(1, level + 1);
-         myView->show();
+        auto myView = new View(1, level + 1);
+        myView->show();
     }
 
     if(level == 2)
     {
-         auto myView = new View(2, level + 1);
-         myView->show();
+        auto myView = new View(2, level + 1);
+        myView->show();
     }
     if(level == 3)
     {
-         auto myView = new View(2, level + 1);
-         myView->show();
+        auto myView = new View(2, level + 1);
+        myView->show();
     }
 
     if(level == 4)
     {
-         auto myView = new View(3, level + 1);
-         myView->show();
+        auto myView = new View(3, level + 1);
+        myView->show();
     }
 
     if(level == 5)
     {
-         auto myView = new View(3, level + 1);
-         myView->show();
+        auto myView = new View(3, level + 1);
+        myView->show();
     }
 }
 

@@ -1,4 +1,4 @@
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */
 #ifndef LEVEL3BUTTON_H
 #define LEVEL3BUTTON_H
 
@@ -26,4 +26,4 @@ public:
 };
 #endif // LEVEL3BUTTON_H
 
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */

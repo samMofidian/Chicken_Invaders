@@ -12,6 +12,9 @@
         <file>SpaceCraft.png</file>
         <file>bullet.png</file>
         <file>gift.png</file>
+        <file>next.png</file>
+        <file>replay.png</file>
+        <file>home.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>test.mp3</file>
