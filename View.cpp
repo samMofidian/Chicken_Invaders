@@ -33,7 +33,7 @@ View::View(int season, int level) : QGraphicsView()
 
     // win music
     winMusic = new QMediaPlayer();
-    winMusic->setMedia(QUrl("qrc:/music/.mp3"));
+    winMusic->setMedia(QUrl("qrc:/music/win.mp3"));
 
     // init seconds
     sec = 0;
@@ -127,7 +127,7 @@ void View::schedule()
         // game over
         gameOverMusic->play();
         QGraphicsPixmapItem * gameOver = new QGraphicsPixmapItem();
-        gameOver->setPixmap(QPixmap(":/image/"));
+        gameOver->setPixmap(QPixmap(":/image/game over.png"));
         viewController->scene->addItem(gameOver);
         gameOver->setPos(0, 0);
 
@@ -136,9 +136,9 @@ void View::schedule()
         homeButton = new Home(viewController->scene);
 
     }
-/*
+
     // win game
-    if(viewController->game_over() == false && sec > 100000)
+    if(viewController->game_over() == false)
     {
         // stop game
         pause();
@@ -147,7 +147,7 @@ void View::schedule()
         // win
         winMusic->play();
         QGraphicsPixmapItem * win = new QGraphicsPixmapItem();
-        win->setPixmap(QPixmap(":/image/"));
+        win->setPixmap(QPixmap(":/image/win.png"));
         viewController->scene->addItem(win);
         win->setPos(0,0);
 
@@ -160,7 +160,7 @@ void View::schedule()
             nextButton = new Next(viewController->scene , level);
         }
     }
-*/
+
 }
 
 /* written & directed by sAm mofidian */

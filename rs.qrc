@@ -17,10 +17,13 @@
         <file>home.png</file>
         <file>bullet2.png</file>
         <file>egg.png</file>
+        <file>game over.png</file>
+        <file>win.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>test.mp3</file>
         <file>click.mp3</file>
         <file>level.mp3</file>
+        <file>win.mp3</file>
     </qresource>
 </RCC>
