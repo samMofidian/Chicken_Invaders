@@ -21,8 +21,10 @@ void Gift::move()
     QList <QGraphicsItem *> collidingList = collidingItems();
 
      // change bullet type
-     for(size_t i{0} ; i < collidingList.size();++i){
-         if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
+     for(size_t i{0} ; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+         {
             ( dynamic_cast<SpaceCraft *>(collidingList[i]))->changeShotType();
 
             // delete

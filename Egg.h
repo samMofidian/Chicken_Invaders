@@ -6,6 +6,7 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 #include <QTimer>
+#include "Score.h"
 
 class Egg : public QObject, public QGraphicsPixmapItem
 {
@@ -15,11 +16,13 @@ class Egg : public QObject, public QGraphicsPixmapItem
 private:
 
     QGraphicsScene * eggScene;
+    Score * eggScore;
     int timeIntervals;
 
 public:
 
     explicit Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent = nullptr);
+    void breakEgg();
 
 signals:
 

@@ -8,6 +8,7 @@ class Score : public QGraphicsTextItem
 {
 
     friend class Chicken;
+    friend class Egg;
 
 private:
 
@@ -16,7 +17,7 @@ private:
 public:
 
     Score(QGraphicsItem *parent = 0);
-    void addToScore(int s);
+    void addScore(int s);
     int getScore();
     void setScore(int score);
 };

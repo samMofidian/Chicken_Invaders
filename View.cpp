@@ -29,7 +29,7 @@ View::View(int season, int level) : QGraphicsView()
 
     // game over music
     gameOverMusic = new QMediaPlayer();
-    gameOverMusic->setMedia(QUrl("qrc:/music/.mp3"));
+    gameOverMusic->setMedia(QUrl("qrc:/music/gameover.mp3"));
 
     // win music
     winMusic = new QMediaPlayer();
@@ -136,7 +136,7 @@ void View::schedule()
         homeButton = new Home(viewController->scene);
 
     }
-
+/*
     // win game
     if(viewController->game_over() == false)
     {
@@ -160,7 +160,7 @@ void View::schedule()
             nextButton = new Next(viewController->scene , level);
         }
     }
-
+*/
 }
 
 /* written & directed by sAm mofidian */

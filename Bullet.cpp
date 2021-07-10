@@ -1,5 +1,6 @@
 /* written & directed by sAm mofidian*/
 #include "Bullet.h"
+#include "Egg.h"
 #include <QGraphicsScene>
 
 Bullet::Bullet(QGraphicsItem * parent) : QObject(),
@@ -35,7 +36,22 @@ Bullet::Bullet(int t)
 
 void Bullet::moveToUp()
 {
+    QList < QGraphicsItem * > collidingList = collidingItems();
 
+    // break egg
+    for(size_t i{0} ; i < collidingList.size(); ++i)
+    {
+        if(typeid(*(collidingList)[i]) == typeid(Egg))
+        {
+            (dynamic_cast<Egg *>(collidingList[i]))->breakEgg();
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+        }
+    }
+
+    // pos
     setPos(x(), y() - 40);
 
     // delete bullet out of screen

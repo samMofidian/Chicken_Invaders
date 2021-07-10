@@ -1,6 +1,7 @@
 /* written & directed by sAm mofidian */
 #include "Egg.h"
 #include "SpaceCraft.h"
+#include "Score.h"
 
 Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : QObject(),
     QGraphicsPixmapItem(parent), eggScene(eggScene), timeIntervals{0}
@@ -16,13 +17,21 @@ Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : Q
     connect(etimer, SIGNAL(timeout()), this, SLOT(fall()));
 }
 
+void Egg::breakEgg()
+{
+    scene()->removeItem(this);
+    eggScore->addScore(5);
+}
+
 void Egg::fall()
 {
     QList <QGraphicsItem *> collidingList = collidingItems();
 
      // decrement live
-     for(size_t i{0}; i < collidingList.size(); ++i){
-         if(typeid(*(collidingList)[i])==typeid (SpaceCraft)){
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+         {
             ( dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
 
             // delete
