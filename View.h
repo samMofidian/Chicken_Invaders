@@ -8,6 +8,8 @@
 #include <QMediaPlayer>
 #include "Controller.h"
 #include "Replay.h"
+#include "Home.h"
+#include "Next.h"
 
 class View : public QGraphicsView
 {
@@ -21,9 +23,12 @@ private:
     Controller * viewController;
     QMediaPlayer * viewPlayer;
     QMediaPlayer *gameOverMusic;
+    QMediaPlayer *winMusic;
     int level;
     int season;
     Replay * replayButton;
+    Next * nextButton;
+    Home * homeButton;
 
 public:
 
