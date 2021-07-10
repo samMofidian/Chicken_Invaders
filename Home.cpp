@@ -15,7 +15,7 @@ Home::Home(QGraphicsScene * scene) : homeScene{scene}
     scene->addItem(this);
 
     // pos
-    setPos(100, 100);
+    setPos(300, 625);
 
     // music
     homeMusic = new QMediaPlayer();

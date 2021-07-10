@@ -14,7 +14,7 @@ Next::Next(QGraphicsScene * scene, int level) : nextScene{scene}
     scene->addItem(this);
 
     // pos
-    setPos(100, 100);
+    setPos(450, 625);
 
     // music
     nextMusic = new QMediaPlayer();
