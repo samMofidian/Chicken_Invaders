@@ -10,6 +10,7 @@
 #include "Replay.h"
 #include "Home.h"
 #include "Next.h"
+#include "GameOverImage.h"
 
 class View : public QGraphicsView
 {
@@ -26,6 +27,7 @@ private:
     QMediaPlayer * winMusic;
     int level;
     int season;
+    GameOverImage * gameOver;
     Replay * replayButton;
     Next * nextButton;
     Home * homeButton;

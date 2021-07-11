@@ -124,12 +124,11 @@ void View::schedule()
         pause();
         viewPlayer->stop();
 
-        // game over
+        // game over music
         gameOverMusic->play();
-        QGraphicsPixmapItem * gameOver = new QGraphicsPixmapItem();
-        gameOver->setPixmap(QPixmap(":/image/game over.png"));
-        viewController->scene->addItem(gameOver);
-        gameOver->setPos(0, 0);
+
+        // game over image
+        gameOver = new GameOverImage(viewController->scene);
 
         // replay and home buttons
         replayButton = new Replay(viewController->scene, season, level);

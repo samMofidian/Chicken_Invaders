@@ -14,6 +14,7 @@ SOURCES += \
     Controller.cpp \
     Egg.cpp \
     ExitButton.cpp \
+    GameOverImage.cpp \
     Gift.cpp \
     Home.cpp \
     Level1Button.cpp \
@@ -36,6 +37,7 @@ HEADERS += \
     Controller.h \
     Egg.h \
     ExitButton.h \
+    GameOverImage.h \
     Gift.h \
     Home.h \
     Level1Button.h \

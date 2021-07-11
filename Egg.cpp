@@ -20,7 +20,6 @@ Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : Q
 void Egg::breakEgg()
 {
     scene()->removeItem(this);
-    eggScore->addScore(5);
 }
 
 void Egg::fall()
