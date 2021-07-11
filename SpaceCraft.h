@@ -12,6 +12,7 @@ class SpaceCraft : public QObject , public QGraphicsPixmapItem
 {
 
     friend class Controller;
+    friend class Life;
 
     Q_OBJECT
 

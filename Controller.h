@@ -6,11 +6,13 @@
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
 #include <QGraphicsView>
+#include <QGraphicsSimpleTextItem>
 #include <QTimer>
 #include <SpaceCraft.h>
 #include <Score.h>
 #include <Gift.h>
 #include <Egg.h>
+#include <Life.h>
 
 
 class Controller : public QObject
@@ -30,6 +32,7 @@ private:
     Score * score;
     QList<Gift *> giftList;
     QList<Egg *> eggList;
+    Life * life;
 
 public:
 
@@ -39,6 +42,7 @@ public:
     void addGift();
     void addEgg();
     bool game_over();
+    void addLife();
 
 signals:
 

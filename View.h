@@ -6,6 +6,7 @@
 #include <QGraphicsView>
 #include <QTimer>
 #include <QMediaPlayer>
+#include <QGraphicsTextItem>
 #include "Controller.h"
 #include "Replay.h"
 #include "Home.h"

@@ -47,6 +47,7 @@ View::View(int season, int level) : QGraphicsView()
 
     // add space craft
     viewController->addSpaceCraft();
+
 }
 
 void View::pause()
@@ -135,7 +136,7 @@ void View::schedule()
         homeButton = new Home(viewController->scene);
 
     }
-
+/*
     // win game
     if(viewController->game_over() == false)
     {
@@ -158,7 +159,7 @@ void View::schedule()
             nextButton = new Next(viewController->scene , level);
         }
     }
-
+*/
 }
 
 /* written & directed by sAm mofidian */

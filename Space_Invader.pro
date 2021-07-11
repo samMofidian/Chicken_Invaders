@@ -23,6 +23,7 @@ SOURCES += \
     Level4Button.cpp \
     Level5Button.cpp \
     Level6Button.cpp \
+    Life.cpp \
     Menu.cpp \
     Next.cpp \
     Replay.cpp \
@@ -47,6 +48,7 @@ HEADERS += \
     Level4Button.h \
     Level5Button.h \
     Level6Button.h \
+    Life.h \
     Menu.h \
     Next.h \
     Replay.h \

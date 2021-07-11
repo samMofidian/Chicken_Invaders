@@ -16,7 +16,7 @@ private:
 
 public:
 
-    Score(QGraphicsItem *parent = 0);
+    Score(QGraphicsItem * parent = 0);
     void addScore(int s);
     int getScore();
     void setScore(int score);

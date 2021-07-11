@@ -32,6 +32,11 @@ void Controller::addSpaceCraft()
     // focus
     spaceCraft->setFlag(QGraphicsItem::ItemIsFocusable);
     spaceCraft->setFocus();
+
+    // life
+    life = new Life(spaceCraft);
+    scene->addItem(life);
+    life->setPos(55, 660);
 }
 
 void Controller::addGift()
@@ -59,3 +64,5 @@ Controller::~Controller()
     delete scene;
     delete ctimer;
 }
+
+
