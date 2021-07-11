@@ -29,6 +29,7 @@ SOURCES += \
     Score.cpp \
     SpaceCraft.cpp \
     View.cpp \
+    WinImage.cpp \
     main.cpp
 
 HEADERS += \
@@ -51,7 +52,8 @@ HEADERS += \
     Replay.h \
     Score.h \
     SpaceCraft.h \
-    View.h
+    View.h \
+    WinImage.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

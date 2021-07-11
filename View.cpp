@@ -135,7 +135,7 @@ void View::schedule()
         homeButton = new Home(viewController->scene);
 
     }
-/*
+
     // win game
     if(viewController->game_over() == false)
     {
@@ -143,12 +143,11 @@ void View::schedule()
         pause();
         viewPlayer->stop();
 
-        // win
+        // win music
         winMusic->play();
-        QGraphicsPixmapItem * win = new QGraphicsPixmapItem();
-        win->setPixmap(QPixmap(":/image/win.png"));
-        viewController->scene->addItem(win);
-        win->setPos(0,0);
+
+        // win image
+        win = new WinImage(viewController->scene);
 
         // home button
         homeButton = new Home(viewController->scene);
@@ -159,7 +158,7 @@ void View::schedule()
             nextButton = new Next(viewController->scene , level);
         }
     }
-*/
+
 }
 
 /* written & directed by sAm mofidian */

@@ -3,7 +3,6 @@
 
 GameOverImage::GameOverImage(QGraphicsScene * scene) : gameOverScene{scene}
 {
-
     // image
     setPixmap(QPixmap(":/image/game_over.png"));
 

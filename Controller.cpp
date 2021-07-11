@@ -50,7 +50,7 @@ bool Controller::game_over()
     if (spaceCraft->getLives() < 1)
         return true;
 
-    return true;
+    return false;
 }
 
 Controller::~Controller()

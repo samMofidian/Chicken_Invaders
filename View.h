@@ -11,6 +11,7 @@
 #include "Home.h"
 #include "Next.h"
 #include "GameOverImage.h"
+#include "WinImage.h"
 
 class View : public QGraphicsView
 {
@@ -28,6 +29,7 @@ private:
     int level;
     int season;
     GameOverImage * gameOver;
+    WinImage * win;
     Replay * replayButton;
     Next * nextButton;
     Home * homeButton;

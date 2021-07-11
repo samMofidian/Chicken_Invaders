@@ -17,8 +17,8 @@
         <file>home.png</file>
         <file>bullet2.png</file>
         <file>egg.png</file>
-        <file>win.png</file>
         <file>game_over.png</file>
+        <file>win.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>click.mp3</file>
