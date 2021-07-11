@@ -31,7 +31,7 @@ void Egg::fall()
      for(size_t i{0}; i < collidingList.size(); ++i)
      {
          if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
-         {
+          {
             ( dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
 
             // delete
