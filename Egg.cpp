@@ -47,7 +47,13 @@ void Egg::fall()
     ++timeIntervals;
     setPos(x() , y() + 25);
 
-    if(timeIntervals == 35 || y() > 745)
+    if(y() > 625)
+    {
+        setPixmap(QPixmap(":/image/egg-2.png"));
+    }
+
+
+    if(timeIntervals == 35 || y() > 750)
     {
         eggScene->removeItem(this);
         delete this;
