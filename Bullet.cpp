@@ -1,6 +1,7 @@
 /* written & directed by sAm mofidian*/
 #include "Bullet.h"
 #include "Egg.h"
+#include "Score.h"
 #include <QGraphicsScene>
 
 Bullet::Bullet(QGraphicsItem * parent) : QObject(),

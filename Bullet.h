@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QGraphicsPixmapItem>
 #include <QTimer>
+#include <Score.h>
 
 class Bullet : public QObject, public QGraphicsPixmapItem
 {
@@ -14,6 +15,7 @@ class Bullet : public QObject, public QGraphicsPixmapItem
 private:
 
     QTimer * btimer;
+    Score * bscore;
 
 public:
 

@@ -20,6 +20,7 @@ Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, Score * escore, QGraphicsIt
 void Egg::breakEgg()
 {
     scene()->removeItem(this);
+    escore->addScore(5);
 }
 
 void Egg::fall()
@@ -31,9 +32,10 @@ void Egg::fall()
      {
          if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
           {
-            ( dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
 
-             escore->addScore(5);
+            // add score
+            escore->addScore(5);
 
             // delete
             scene()->removeItem(this);
