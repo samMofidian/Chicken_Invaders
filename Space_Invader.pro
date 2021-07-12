@@ -10,7 +10,6 @@ CONFIG += c++11
 
 SOURCES += \
     Bullet.cpp \
-    Chicken1.cpp \
     Controller.cpp \
     Egg.cpp \
     ExitButton.cpp \
@@ -35,7 +34,6 @@ SOURCES += \
 
 HEADERS += \
     Bullet.h \
-    Chicken1.h \
     Controller.h \
     Egg.h \
     ExitButton.h \

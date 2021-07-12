@@ -73,6 +73,11 @@ void SpaceCraft::mousePressEvent(QGraphicsSceneMouseEvent * event)
     scene()->addItem(bullet);
 }
 
+void SpaceCraft::mouseMoveEvent(QGraphicsSceneMouseEvent * event)
+{
+
+}
+
 void SpaceCraft::changeShotType()
 {
     shotType = 2;

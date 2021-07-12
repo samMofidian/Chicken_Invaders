@@ -7,6 +7,7 @@
 #include <QGraphicsScene>
 #include <QTimer>
 #include "Score.h"
+#include "GameOverImage.h"
 
 class Egg : public QObject, public QGraphicsPixmapItem
 {
@@ -18,6 +19,7 @@ private:
     QGraphicsScene * eggScene;
     Score * eggScore;
     int timeIntervals;
+    GameOverImage * g;
 
 public:
 

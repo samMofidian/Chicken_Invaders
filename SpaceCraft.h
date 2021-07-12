@@ -32,6 +32,7 @@ public:
     void decrementLive();
     void setBullet();
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
+    void mouseMoveEvent(QGraphicsSceneMouseEvent * event);
     void changeShotType();
     int getLives();
 
