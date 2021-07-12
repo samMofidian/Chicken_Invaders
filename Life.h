@@ -1,3 +1,4 @@
+/* written & directed by sAm mofidian */
 #ifndef LIFE_H
 #define LIFE_H
 
@@ -16,3 +17,5 @@ public:
 };
 
 #endif // LIFE_H
+
+/* written & directed by sAm mofidian */
