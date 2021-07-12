@@ -17,13 +17,13 @@ class Egg : public QObject, public QGraphicsPixmapItem
 private:
 
     QGraphicsScene * eggScene;
-    Score * eggScore;
+    Score * escore;
     int timeIntervals;
     GameOverImage * g;
 
 public:
 
-    explicit Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent = nullptr);
+    explicit Egg(QGraphicsScene * eggScene, QTimer * etimer, Score * escore, QGraphicsItem * parent = nullptr);
     void breakEgg();
 
 signals:

@@ -3,8 +3,8 @@
 #include "SpaceCraft.h"
 #include "Score.h"
 
-Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, QGraphicsItem * parent) : QObject(),
-    QGraphicsPixmapItem(parent), eggScene(eggScene), timeIntervals{0}
+Egg::Egg(QGraphicsScene * eggScene, QTimer * etimer, Score * escore, QGraphicsItem * parent) : QObject(),
+    QGraphicsPixmapItem(parent), eggScene(eggScene), escore(escore), timeIntervals{0}
 {
     // image
     setPixmap(QPixmap(":/image/egg.png"));
@@ -32,6 +32,8 @@ void Egg::fall()
          if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
           {
             ( dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+             escore->addScore(5);
 
             // delete
             scene()->removeItem(this);

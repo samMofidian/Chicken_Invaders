@@ -46,7 +46,7 @@ void Controller::addGift()
 
 void Controller::addEgg()
 {
-    eggList.push_back(new Egg{scene, ctimer, holder});
+    eggList.push_back(new Egg{scene, ctimer, score, holder});
 }
 
 
