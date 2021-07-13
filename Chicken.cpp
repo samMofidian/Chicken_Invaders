@@ -51,6 +51,7 @@ Chicken::~Chicken()
 
 void Chicken::move()
 {
+    /* written & directed by sAm mofidian */
     QList <QGraphicsItem *> collidingList = collidingItems();
 
      // decrement live
@@ -69,6 +70,7 @@ void Chicken::move()
             return;
          }
      }
+     /* written & directed by sAm mofidian */
 
     setPos( x(), y() + 6 );
 

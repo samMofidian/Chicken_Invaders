@@ -52,6 +52,7 @@ Hen::~Hen()
 void Hen::henmove()
 {
 
+    /* written & directed by sAm mofidian */
     QList <QGraphicsItem *> collidingList = collidingItems();
 
      // decrement live
@@ -70,6 +71,7 @@ void Hen::henmove()
             return;
          }
      }
+     /* written & directed by sAm mofidian */
 
     ++timeIntervals;
     setPos(x() , y() + 6);

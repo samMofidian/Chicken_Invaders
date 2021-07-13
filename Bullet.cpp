@@ -1,6 +1,9 @@
 /* written & directed by sAm mofidian*/
 #include "Bullet.h"
 #include "Egg.h"
+#include "Chicken.h"
+#include "Hen.h"
+#include "Superhen.h"
 #include "Score.h"
 #include <QGraphicsScene>
 
@@ -39,12 +42,39 @@ void Bullet::moveToUp()
 {
     QList < QGraphicsItem * > collidingList = collidingItems();
 
-    // break egg
+    // kill
     for(size_t i{0} ; i < collidingList.size(); ++i)
     {
         if(typeid(*(collidingList)[i]) == typeid(Egg))
         {
             (dynamic_cast<Egg *>(collidingList[i]))->breakEgg();
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+        }
+
+        if(typeid(*(collidingList)[i]) == typeid(Chicken))
+        {
+            (dynamic_cast<Chicken *>(collidingList[i]))->decrementLives();
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+        }
+
+        if(typeid(*(collidingList)[i]) == typeid(Hen))
+        {
+            (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives();
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+        }
+
+        if(typeid(*(collidingList)[i]) == typeid(Superhen))
+        {
+            (dynamic_cast<Superhen *>(collidingList[i]))->superhendecrementLives();
 
             // delete
             scene()->removeItem(this);
@@ -65,4 +95,4 @@ void Bullet::moveToUp()
 
 }
 
-/* written & directed by sAm mofidian*/
+/* written & directed by sAm mofidian */

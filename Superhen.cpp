@@ -52,6 +52,7 @@ Superhen::~Superhen()
 
 void Superhen::superhenmove()
 {
+    /* written & directed by sAm mofidian */
     QList <QGraphicsItem *> collidingList = collidingItems();
 
      // decrement live
@@ -69,7 +70,8 @@ void Superhen::superhenmove()
             delete this;
             return;
          }
-    }
+     }
+     /* written & directed by sAm mofidian */
 
     setPos( x(), y() + 6 );
 }
