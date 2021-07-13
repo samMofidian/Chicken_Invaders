@@ -4,8 +4,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer )
-    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{2}, timeIntervals{0}, hscore(hscore)
+Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer, int limitY )
+    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{2}, timeIntervals{0}, hscore(hscore), limitY{limitY}
 {
     // set picture
     setPixmap(QPixmap(":/image/1.png"));
@@ -15,8 +15,6 @@ Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Sco
     henPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
 
     // add to scene
-    int sec = 0;
-    sec ++;
     chickScene->addItem( this );
 
     // connect timer to move
@@ -74,13 +72,10 @@ void Hen::henmove()
      }
      /* written & directed by sAm mofidian */
 
-    ++timeIntervals;
-    setPos(x() , y() + 6);
-
-    if( timeIntervals == 1 )
-    {
-        setPos( x(), y() - 6 );
-    }
+     if( y() <= limitY )
+     {
+     setPos( x(), y() + 6 );
+     }
 }
 
 void Hen::hendecrementLives()

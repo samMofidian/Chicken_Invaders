@@ -12,7 +12,7 @@ class Superhen : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        Superhen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * sscore, QTimer * hentimer );
+        Superhen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * sscore, QTimer * hentimer, int limitY );
         Superhen();
         ~Superhen();
 
@@ -20,6 +20,7 @@ class Superhen : public QObject, public QGraphicsPixmapItem
         QGraphicsScene * superhenScene;
         QMediaPlayer * superhenPlayer;
         int superhenlives;
+        int limitY;
         QTimer * superhentimer;
         /* sAm mofidian */
         Score * sscore;

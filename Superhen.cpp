@@ -4,8 +4,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int superhenlives, Score * sscore, QTimer * superhentimer )
-    : QObject(), QGraphicsPixmapItem( parent ), superhenScene( superhenScene ), superhenlives{4}, sscore(sscore)
+Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int superhenlives, Score * sscore, QTimer * superhentimer, int limitY )
+    : QObject(), QGraphicsPixmapItem( parent ), superhenScene( superhenScene ), superhenlives{4}, sscore(sscore), limitY{limitY}
 {
     // set picture
     setPixmap(QPixmap(":/image/s1.png"));
@@ -15,8 +15,6 @@ Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int 
     superhenPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
 
     // add to scene
-    int sec = 0;
-    sec ++;
     superhenScene->addItem( this );
 
 
@@ -74,7 +72,10 @@ void Superhen::superhenmove()
      }
      /* written & directed by sAm mofidian */
 
-    setPos( x(), y() + 6 );
+     if( y() <= limitY )
+     {
+     setPos( x(), y() + 6 );
+     }
 }
 
 void Superhen::superhendecrementLives()

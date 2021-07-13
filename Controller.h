@@ -30,6 +30,7 @@ private:
     QGraphicsRectItem * holder;
     QTimer * ctimer;
     int season;
+    int timeIntervals;
     SpaceCraft * spaceCraft;
     Score * score;
     QList<Gift *> giftList;

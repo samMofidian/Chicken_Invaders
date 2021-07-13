@@ -14,14 +14,17 @@ class Chicken : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer );
+        Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer, int limitY );
         Chicken();
         ~Chicken();
+
 
     private:
         QGraphicsScene * chickScene;
         QMediaPlayer * chickPlayer;
         int lives;
+        int limitY;
+        int timeIntervals;
         QTimer * timer;
         /* sAm mofidian */
         Score * cscore;

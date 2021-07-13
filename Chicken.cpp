@@ -4,8 +4,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer )
-    : QObject(), QGraphicsPixmapItem( parent ), chickScene( chickScene ), lives{lives}, cscore(cscore)
+Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer, int limitY )
+    : QObject(), QGraphicsPixmapItem( parent ), chickScene( chickScene ), lives{lives}, cscore(cscore), limitY{limitY}
 {
     // set picture
     setPixmap(QPixmap(":/image/joojeh1.png"));
@@ -16,8 +16,6 @@ Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives
     chickPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
 
     // add to scene
-    int sec = 0;
-    sec ++;
     chickScene->addItem( this );
 
     // connect timer to move
@@ -73,8 +71,10 @@ void Chicken::move()
      }
      /* written & directed by sAm mofidian */
 
-    setPos( x(), y() + 6 );
-
+     if( y() <= limitY )
+     {
+     setPos( x(), y() + 6 );
+     }
 }
 
 void Chicken::decrementLives()

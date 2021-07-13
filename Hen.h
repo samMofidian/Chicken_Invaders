@@ -13,7 +13,7 @@ class Hen : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        Hen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer );
+        Hen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer, int limitY );
         Hen();
         ~Hen();
 
@@ -22,6 +22,7 @@ class Hen : public QObject, public QGraphicsPixmapItem
         QMediaPlayer * henPlayer;
         int henlives;
         QTimer * hentimer;
+        int limitY;
         int timeIntervals;
         /* sAm mofidian */
         Score * hscore;
