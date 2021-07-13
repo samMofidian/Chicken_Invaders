@@ -47,9 +47,12 @@ void Egg::fall()
     ++timeIntervals;
     setPos(x() , y() + 25);
 
-    if(y() > 625)
+    if(y() > 724)
     {
         setPixmap(QPixmap(":/image/egg-2.png"));
+        /* elham zahir */
+        setPos( x(), y() - 25 );
+        /* elham zahir */
     }
 
 
