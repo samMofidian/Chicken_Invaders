@@ -21,7 +21,9 @@ class Superhen : public QObject, public QGraphicsPixmapItem
         QMediaPlayer * superhenPlayer;
         int superhenlives;
         QTimer * superhentimer;
+        /* sAm mofidian */
         Score * sscore;
+        /* sAm mofidian */
 
     public slots:
         void superhenmove();

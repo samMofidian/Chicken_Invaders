@@ -1,3 +1,4 @@
+/* elham zahir */
 #include "Hen.h"
 #include "SpaceCraft.h"
 #include <QGraphicsPixmapItem>
@@ -89,8 +90,12 @@ void Hen::hendecrementLives()
 
     // change the picture if lives == 0
     if( henlives == 0 ){
+        /* sAm mofidian */
         hscore->addScore(10);
+        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }
 }
+
+/* elham zahir */

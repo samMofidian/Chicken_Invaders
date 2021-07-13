@@ -1,3 +1,4 @@
+/* elham zahir */
 #include "Superhen.h"
 #include "SpaceCraft.h"
 #include <QGraphicsPixmapItem>
@@ -83,8 +84,12 @@ void Superhen::superhendecrementLives()
 
     // remove and delete if lives == 0
     if( superhenlives == 0 ){
+        /* sAm mofidian */
         sscore->addScore(15);
+        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }
 }
+
+/* elham zahir */

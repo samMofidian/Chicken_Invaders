@@ -1,3 +1,4 @@
+/* elham zahir */
 #ifndef HEN_H
 #define HEN_H
 
@@ -22,7 +23,9 @@ class Hen : public QObject, public QGraphicsPixmapItem
         int henlives;
         QTimer * hentimer;
         int timeIntervals;
+        /* sAm mofidian */
         Score * hscore;
+        /* sAm mofidian */
 
     public slots:
         void henmove();
@@ -32,3 +35,5 @@ class Hen : public QObject, public QGraphicsPixmapItem
 };
 
 #endif // HEN_H
+
+/* elham zahir */

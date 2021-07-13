@@ -1,3 +1,4 @@
+/* elham zahir */
 #ifndef CHICKEN_H
 #define CHICKEN_H
 
@@ -22,7 +23,9 @@ class Chicken : public QObject, public QGraphicsPixmapItem
         QMediaPlayer * chickPlayer;
         int lives;
         QTimer * timer;
+        /* sAm mofidian */
         Score * cscore;
+        /* sAm mofidian */
 
     public slots:
         void move();
@@ -32,3 +35,5 @@ class Chicken : public QObject, public QGraphicsPixmapItem
 };
 
 #endif // CHICKEN_H
+
+/* elham zahir */

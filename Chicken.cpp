@@ -1,3 +1,4 @@
+/* elham zahir */
 #include "Chicken.h"
 #include "SpaceCraft.h"
 #include <QGraphicsPixmapItem>
@@ -83,8 +84,12 @@ void Chicken::decrementLives()
 
     // remove and delete if lives == 0
     if( lives == 0 ){
+        /* sAm mofidian */
         cscore->addScore(5);
+        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }
 }
+
+/* elham zahir */
