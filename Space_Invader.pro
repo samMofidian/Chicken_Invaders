@@ -16,6 +16,7 @@ SOURCES += \
     ExitButton.cpp \
     GameOverImage.cpp \
     Gift.cpp \
+    Hen.cpp \
     Home.cpp \
     Level1Button.cpp \
     Level2button.cpp \
@@ -41,6 +42,7 @@ HEADERS += \
     ExitButton.h \
     GameOverImage.h \
     Gift.h \
+    Hen.h \
     Home.h \
     Level1Button.h \
     Level2button.h \
