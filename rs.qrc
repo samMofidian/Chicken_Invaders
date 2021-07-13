@@ -22,6 +22,14 @@
         <file>egg-2.png</file>
         <file>joojeh1.png</file>
         <file>joojeh2.png</file>
+        <file>h1.png</file>
+        <file>h2.png</file>
+        <file>h3.png</file>
+        <file>h4.png</file>
+        <file>s1.png</file>
+        <file>s2.png</file>
+        <file>s3.png</file>
+        <file>s5.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>click.mp3</file>

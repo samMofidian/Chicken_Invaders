@@ -24,6 +24,8 @@ Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives
     timer = new QTimer( this );
     timer->start(50);
 
+    layers = 0;
+
 }
 
 Chicken::Chicken() : QObject(), QGraphicsPixmapItem(), chickScene( chickScene ), lives{1}
@@ -92,6 +94,17 @@ void Chicken::move()
      {
      setPos( x(), y() + 6 );
      }
+
+     // layers
+     if(layers % 2 == 0)
+     {
+         setPixmap(QPixmap(":/image/joojeh1.png"));
+     }
+     if(layers % 2 == 1)
+     {
+         setPixmap(QPixmap(":/image/joojeh2.png"));
+     }
+     layers += 1;
 }
 
 void Chicken::decrementLives()

@@ -30,6 +30,7 @@ class Chicken : public QObject, public QGraphicsPixmapItem
         QTimer * timer;
         /* sAm mofidian */
         Score * cscore;
+        int layers;
         /* sAm mofidian */
 
     public slots:
