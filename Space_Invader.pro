@@ -30,6 +30,7 @@ SOURCES += \
     Replay.cpp \
     Score.cpp \
     SpaceCraft.cpp \
+    SuperHen.cpp \
     View.cpp \
     WinImage.cpp \
     main.cpp
@@ -56,6 +57,7 @@ HEADERS += \
     Replay.h \
     Score.h \
     SpaceCraft.h \
+    SuperHen.h \
     View.h \
     WinImage.h
 
