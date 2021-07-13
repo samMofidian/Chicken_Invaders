@@ -33,12 +33,16 @@ private:
     int season;
     SpaceCraft * spaceCraft;
     Score * score;
-    /* elham zahir */
-    int lvl;
-    /* elham zahir */
     QList<Gift *> giftList;
     QList<Egg *> eggList;
     Life * life;
+    /* elham zahir */
+    int lvl;
+    QList<Chicken *> chickList;
+    QList<Hen *>henList;
+    QList<SuperHen *>superhenList;
+    int chickLives;
+    /* elham zahir */
 
 public:
 

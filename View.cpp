@@ -9,7 +9,7 @@ View::View(int season, int level) : QGraphicsView()
     this->season = season;
 
     // viewController
-    viewController = new Controller(season);
+    viewController = new Controller(season, level);
 
     // scene
     setScene(viewController->scene);
@@ -47,6 +47,14 @@ View::View(int season, int level) : QGraphicsView()
 
     // add space craft
     viewController->addSpaceCraft();
+
+    /* elham zahir */
+    // connect to schedule
+    connect( vtimer, SIGNAL(timeout()), this, SLOT(schedule()));
+
+    //add chick
+    viewController->addChick();
+    /* elham zahir */
 
 }
 
