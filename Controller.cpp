@@ -107,7 +107,7 @@ void Controller::addChick()
             for( int i = 0 ; i < 9 ; i ++ ){
                 chicken[i] = new Chicken*[4];
                 for( int j = 0 ; j < 4 ; j ++ ){
-                chicken[i][j] = new Chicken{scene, holder,1 , ctimer};
+                chicken[i][j] = new Chicken{scene, holder,1 , score, ctimer};
                 int a = 120 * i + 90;
                chicken[i][j]->setPos( a, - 100 * j - 600 );
                if( chicken[i][j]->y() != 300 ){
@@ -123,7 +123,7 @@ void Controller::addChick()
                 for( int i = 0 ; i < 4 ; i ++ ){
                     hen[i] = new Hen*[3];
                     for( int j = 0 ; j < 3 ; j ++ ){
-                    hen[i][j] = new Hen{scene, holder,2 , ctimer};
+                    hen[i][j] = new Hen{scene, holder,2, score , ctimer};
                     int a = 240 * i + 120;
                     if( j % 2 == 0 )
                         a += 120;
@@ -133,7 +133,7 @@ void Controller::addChick()
                 for( int i = 0 ; i < 4 ; i ++ ){
                     chicken[i] = new Chicken*[3];
                     for( int j = 0 ; j < 3 ; j ++ ){
-                    chicken[i][j] = new Chicken{scene, holder,1 , ctimer};
+                    chicken[i][j] = new Chicken{scene, holder,1, score , ctimer};
                     int a = 240 * i + 120;
                     if( j % 2 == 1 )
                         a += 120;
@@ -147,7 +147,7 @@ void Controller::addChick()
             for( int i = 0 ; i < 10 ; i ++ ){
                 hen[i] = new Hen*[3];
                 for( int j = 0 ; j < 3 ; j ++ ){
-                hen[i][j] = new Hen{scene, holder,2 , ctimer};
+                hen[i][j] = new Hen{scene, holder,2, score , ctimer};
                 int a = 100 * i + 80;
                hen[i][j]->setPos( a , - 100 * j - 600 );
                if( hen[i][j]->y() != 100 * j ){
@@ -176,7 +176,7 @@ void Controller::addChick()
                        for( int i = 0 ; i < 3 ; i ++ ){
                            hen[i] = new Hen*[3];
                            for( int j = 0 ; j < 3 ; j ++ ){
-                           hen[i][j] = new Hen{scene, holder,2 , ctimer};
+                           hen[i][j] = new Hen{scene, holder,2, score , ctimer};
                            int k;
                            if( j % 2 == 1 )
                                k = 60;

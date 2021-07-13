@@ -121,6 +121,7 @@ void Chicken::decrementLives()
     // remove and delete if lives == 0
     if( lives == 0 ){
         /* sAm mofidian */
+        // score
         cscore->addScore(5);
         /* sAm mofidian */
         scene()->removeItem( this );

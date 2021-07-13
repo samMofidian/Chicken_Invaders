@@ -3,8 +3,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, QTimer * hentimer )
-    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{henlives}
+Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer )
+    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{henlives}, hscore(hscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/1.png"));
@@ -67,6 +67,28 @@ Hen::~Hen()
 
 void Hen::henmove()
 {
+
+    /* sAm mofidian */
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+          {
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // add score
+            hscore->addScore(10);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
+    /* sAm mofidian */
+
     //Chicken * chick = new Chicken{ chickScene, parent, lives, timer}[5];
     //for( int i = 0 ; i < 5 ; i ++ ){/*
 //    int sec = 0;
@@ -85,6 +107,10 @@ void Hen::hendecrementLives()
 
     // remove and delete if lives == 0
     if( henlives == 0 ){
+        /* sAm mofidian */
+        // score
+        hscore->addScore(10);
+        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }
