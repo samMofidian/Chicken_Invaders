@@ -3,8 +3,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-SuperHen::SuperHen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int superhenlives, QTimer * superhentimer )
-    : QObject(), QGraphicsPixmapItem( parent ), superhenScene( superhenScene ), superhenlives{superhenlives}
+SuperHen::SuperHen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int superhenlives, Score * sscore, QTimer * superhentimer )
+    : QObject(), QGraphicsPixmapItem( parent ), superhenScene( superhenScene ), superhenlives{superhenlives}, sscore(sscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/s1.png"));
@@ -76,6 +76,28 @@ void SuperHen::superhenmove()
     setPos( x(), y() + 6 );
     //}
     //}
+
+
+    /* sAm mofidian */
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+          {
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // add score
+            sscore->addScore(15);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
+    /* sAm mofidian */
 }
 
 void SuperHen::superhendecrementLives()
@@ -85,6 +107,9 @@ void SuperHen::superhendecrementLives()
 
     // remove and delete if lives == 0
     if( superhenlives == 0 ){
+        /* sAm mofidian */
+        sscore->addScore(15);
+        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }

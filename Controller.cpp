@@ -196,7 +196,7 @@ void Controller::addChick()
                 superhen[i] = new SuperHen*[3];
                 for( int j = 0 ; j < 3 ; j ++ )
                 {
-                superhen[i][j] = new SuperHen{scene, holder,4 , ctimer};
+                superhen[i][j] = new SuperHen{scene, holder, 4, score, ctimer};
                 int a = 120 * i + 90;
                 superhen[i][j]->setPos( a , - 100 * j - 600 );
                 if( superhen[i][j]->y() != 100 * j )

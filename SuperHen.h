@@ -7,12 +7,14 @@
 #include <QGraphicsScene>
 #include <QMediaPlayer>
 #include <QTimer>
+#include "Score.h"
+#include "SpaceCraft.h"
 
 class SuperHen : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        SuperHen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, QTimer * hentimer );
+        SuperHen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * sscore, QTimer * hentimer );
         SuperHen();
         ~SuperHen();
 
@@ -21,6 +23,9 @@ class SuperHen : public QObject, public QGraphicsPixmapItem
         QMediaPlayer * superhenPlayer;
         int superhenlives;
         QTimer * superhentimer;
+        /* sAm mofidian */
+        Score * sscore;
+        /* sAm mofidian */
 
     public slots:
         void superhenmove();
