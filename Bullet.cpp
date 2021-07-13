@@ -38,6 +38,21 @@ Bullet::Bullet(int t)
     btimer->start(45);
 }
 
+void Bullet::chickSound()
+{
+    QMediaPlayer* chick = new QMediaPlayer();
+    chick->setMedia(QUrl("qrc:/music/chick.mp3"));
+
+    if(chick->state() == QMediaPlayer::PlayingState)
+    {
+        chick->setPosition(0);
+    }
+    else if(chick->state() == QMediaPlayer::StoppedState)
+    {
+        chick->play();
+    }
+}
+
 void Bullet::moveToUp()
 {
     QList < QGraphicsItem * > collidingList = collidingItems();
@@ -59,17 +74,7 @@ void Bullet::moveToUp()
             (dynamic_cast<Chicken *>(collidingList[i]))->decrementLives();
 
             // chick sound
-            QMediaPlayer* chick = new QMediaPlayer();
-            chick->setMedia(QUrl("qrc:/music/chick.mp3"));
-
-            if(chick->state() == QMediaPlayer::PlayingState)
-            {
-                chick->setPosition(0);
-            }
-            else if(chick->state() == QMediaPlayer::StoppedState)
-            {
-                chick->play();
-            }
+            chickSound();
 
             // delete
             scene()->removeItem(this);
@@ -81,17 +86,7 @@ void Bullet::moveToUp()
             (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives();
 
             // chick sound
-            QMediaPlayer* chick = new QMediaPlayer();
-            chick->setMedia(QUrl("qrc:/music/chick.mp3"));
-
-            if(chick->state() == QMediaPlayer::PlayingState)
-            {
-                chick->setPosition(0);
-            }
-            else if(chick->state() == QMediaPlayer::StoppedState)
-            {
-                chick->play();
-            }
+            chickSound();
 
             // delete
             scene()->removeItem(this);
@@ -103,17 +98,7 @@ void Bullet::moveToUp()
             (dynamic_cast<Superhen *>(collidingList[i]))->superhendecrementLives();
 
             // chick sound
-            QMediaPlayer* chick = new QMediaPlayer();
-            chick->setMedia(QUrl("qrc:/music/chick.mp3"));
-
-            if(chick->state() == QMediaPlayer::PlayingState)
-            {
-                chick->setPosition(0);
-            }
-            else if(chick->state() == QMediaPlayer::StoppedState)
-            {
-                chick->play();
-            }
+            chickSound();
 
             // delete
             scene()->removeItem(this);

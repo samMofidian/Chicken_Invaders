@@ -21,6 +21,7 @@ public:
 
     explicit Bullet(QGraphicsItem * parent = nullptr);
     Bullet(int t);
+    void chickSound();
 
 signals:
 
