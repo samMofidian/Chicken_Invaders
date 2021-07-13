@@ -1,4 +1,5 @@
 #include "Superhen.h"
+#include "SpaceCraft.h"
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
@@ -51,6 +52,25 @@ Superhen::~Superhen()
 
 void Superhen::superhenmove()
 {
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+          {
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // add score
+            sscore->addScore(15);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+    }
+
     setPos( x(), y() + 6 );
 }
 

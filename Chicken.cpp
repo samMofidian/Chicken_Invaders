@@ -1,4 +1,5 @@
 #include "Chicken.h"
+#include "SpaceCraft.h"
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
@@ -41,7 +42,6 @@ Chicken::Chicken() : QObject(), QGraphicsPixmapItem(), chickScene( chickScene ),
     // connect timer to move
     connect( timer, SIGNAL(timeout()), this, SLOT(move()) );
 
-    //chscore = new Score();
 }
 
 Chicken::~Chicken()
@@ -51,6 +51,24 @@ Chicken::~Chicken()
 
 void Chicken::move()
 {
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+          {
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // add score
+            cscore->addScore(5);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
 
     setPos( x(), y() + 6 );
 

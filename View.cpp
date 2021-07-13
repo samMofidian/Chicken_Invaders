@@ -47,6 +47,7 @@ View::View(int season, int level) : QGraphicsView()
 
     // add space craft
     viewController->addSpaceCraft();
+    viewController->addChick();
 
 }
 

@@ -1,4 +1,5 @@
 #include "Hen.h"
+#include "SpaceCraft.h"
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
@@ -50,6 +51,25 @@ Hen::~Hen()
 
 void Hen::henmove()
 {
+
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+          {
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // add score
+            hscore->addScore(10);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
 
     ++timeIntervals;
     setPos(x() , y() + 6);
