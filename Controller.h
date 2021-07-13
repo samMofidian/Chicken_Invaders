@@ -13,7 +13,9 @@
 #include <Gift.h>
 #include <Egg.h>
 #include <Life.h>
-
+#include <Chicken.h>
+#include <Hen.h>
+#include <Superhen.h>
 
 class Controller : public QObject
 {
@@ -35,6 +37,10 @@ private:
     Life * life;
     /* elham zahir */
     int lvl;
+    QList<Chicken *> chickList;
+    QList<Hen *>henList;
+    QList<Superhen *>superhenList;
+    int chickLives;
     /* elham zahir */
 
 public:
@@ -46,6 +52,7 @@ public:
     void addEgg();
     bool game_over();
     void addLife();
+    void addChick();
 
 signals:
 
