@@ -8,6 +8,9 @@ class Score : public QGraphicsTextItem
 {
 
     friend class Egg;
+    friend class Chicken;
+    friend class Hen;
+    friend class Superhen;
     friend class Bullet;
 
 private:

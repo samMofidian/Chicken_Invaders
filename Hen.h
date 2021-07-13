@@ -6,12 +6,13 @@
 #include <QGraphicsScene>
 #include <QMediaPlayer>
 #include <QTimer>
+#include "Score.h"
 
 class Hen : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        Hen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, QTimer * hentimer );
+        Hen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer );
         Hen();
         ~Hen();
 
@@ -21,6 +22,7 @@ class Hen : public QObject, public QGraphicsPixmapItem
         int henlives;
         QTimer * hentimer;
         int timeIntervals;
+        Score * hscore;
 
     public slots:
         void henmove();

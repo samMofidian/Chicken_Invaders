@@ -2,8 +2,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, QTimer * hentimer )
-    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{2}, timeIntervals{0}
+Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer )
+    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{2}, timeIntervals{0}, hscore(hscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/1.png"));
@@ -67,6 +67,7 @@ void Hen::hendecrementLives()
 
     // change the picture if lives == 0
     if( henlives == 0 ){
+        hscore->addScore(10);
         scene()->removeItem( this );
         delete this;
     }

@@ -2,8 +2,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int superhenlives, QTimer * superhentimer )
-    : QObject(), QGraphicsPixmapItem( parent ), superhenScene( superhenScene ), superhenlives{4}
+Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int superhenlives, Score * sscore, QTimer * superhentimer )
+    : QObject(), QGraphicsPixmapItem( parent ), superhenScene( superhenScene ), superhenlives{4}, sscore(sscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/s1.png"));
@@ -61,6 +61,7 @@ void Superhen::superhendecrementLives()
 
     // remove and delete if lives == 0
     if( superhenlives == 0 ){
+        sscore->addScore(15);
         scene()->removeItem( this );
         delete this;
     }

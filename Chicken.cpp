@@ -2,8 +2,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, QTimer * timer )
-    : QObject(), QGraphicsPixmapItem( parent ), chickScene( chickScene ), lives{lives}
+Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer )
+    : QObject(), QGraphicsPixmapItem( parent ), chickScene( chickScene ), lives{lives}, cscore(cscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/joojeh1.png"));
@@ -63,6 +63,7 @@ void Chicken::decrementLives()
 
     // remove and delete if lives == 0
     if( lives == 0 ){
+        cscore->addScore(5);
         scene()->removeItem( this );
         delete this;
     }

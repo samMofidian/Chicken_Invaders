@@ -13,7 +13,7 @@ class Chicken : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, QTimer * timer );
+        Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer );
         Chicken();
         ~Chicken();
 
@@ -22,7 +22,7 @@ class Chicken : public QObject, public QGraphicsPixmapItem
         QMediaPlayer * chickPlayer;
         int lives;
         QTimer * timer;
-        //Score * chscore;
+        Score * cscore;
 
     public slots:
         void move();

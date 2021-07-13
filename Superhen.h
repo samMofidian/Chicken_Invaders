@@ -6,12 +6,13 @@
 #include <QGraphicsScene>
 #include <QMediaPlayer>
 #include <QTimer>
+#include "Score.h"
 
 class Superhen : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
     public:
-        Superhen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, QTimer * hentimer );
+        Superhen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * sscore, QTimer * hentimer );
         Superhen();
         ~Superhen();
 
@@ -20,6 +21,7 @@ class Superhen : public QObject, public QGraphicsPixmapItem
         QMediaPlayer * superhenPlayer;
         int superhenlives;
         QTimer * superhentimer;
+        Score * sscore;
 
     public slots:
         void superhenmove();
