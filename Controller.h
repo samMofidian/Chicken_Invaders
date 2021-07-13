@@ -13,6 +13,9 @@
 #include <Gift.h>
 #include <Egg.h>
 #include <Life.h>
+#include <Chicken.h>
+#include <Hen.h>
+#include <SuperHen.h>
 
 
 class Controller : public QObject
@@ -30,19 +33,25 @@ private:
     int season;
     SpaceCraft * spaceCraft;
     Score * score;
+    /* elham zahir */
+    int lvl;
+    /* elham zahir */
     QList<Gift *> giftList;
     QList<Egg *> eggList;
     Life * life;
 
 public:
 
-    explicit Controller(int season, QObject *parent = nullptr);
+    explicit Controller(int season, int lvl, QObject *parent = nullptr);
     ~Controller();
     void addSpaceCraft();
     void addGift();
     void addEgg();
     bool game_over();
     void addLife();
+    /* elham zahir */
+    void addChick();
+    /* elham zahir */
 
 signals:
 
