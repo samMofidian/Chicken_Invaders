@@ -1,7 +1,7 @@
 /* AP final project
  * Start: 7 Jul, 2021
  * Space(Chicken) invaders Game
- * Author: Ali(sAm) Mofidan, mahdis mohammadi, elham zahir
+ * Author: Ali(sAm) Mofidan, Elham Zahir
 */
 
 #include <QApplication>
