@@ -64,10 +64,22 @@ void Hen::henmove()
             // add score
             hscore->addScore(10);
 
+            // crash sound
+            QMediaPlayer* crash = new QMediaPlayer();
+            crash->setMedia(QUrl("qrc:/music/crash.mp3"));
+
+            if(crash->state() == QMediaPlayer::PlayingState)
+            {
+                crash->setPosition(0);
+            }
+            else if(crash->state() == QMediaPlayer::StoppedState)
+            {
+                crash->play();
+            }
+
             // delete
             scene()->removeItem(this);
             delete this;
-            return;
          }
      }
      /* written & directed by sAm mofidian */

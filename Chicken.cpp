@@ -9,7 +9,6 @@ Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives
 {
     // set picture
     setPixmap(QPixmap(":/image/joojeh1.png"));
-    //setPixmap(QPixmap(":/image/hen.png"));
 
     // set chicken sound
     chickPlayer = new QMediaPlayer();
@@ -63,17 +62,30 @@ void Chicken::move()
      {
          if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
           {
-            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+                (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
 
-            // add score
-            cscore->addScore(5);
+                // add score
+                cscore->addScore(5);
 
-            // delete
-            scene()->removeItem(this);
-            delete this;
-            return;
-         }
-     }
+                // crash sound
+                QMediaPlayer* crash = new QMediaPlayer();
+                crash->setMedia(QUrl("qrc:/music/crash.mp3"));
+
+                if(crash->state() == QMediaPlayer::PlayingState)
+                {
+                    crash->setPosition(0);
+                }
+                else if(crash->state() == QMediaPlayer::StoppedState)
+                {
+                    crash->play();
+                }
+
+                // delete
+                scene()->removeItem(this);
+                delete this;
+
+          }
+    }
      /* written & directed by sAm mofidian */
 
      if( y() <= limitY )
