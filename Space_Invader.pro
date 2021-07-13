@@ -16,6 +16,7 @@ SOURCES += \
     ExitButton.cpp \
     GameOverImage.cpp \
     Gift.cpp \
+    Hen.cpp \
     Home.cpp \
     Level1Button.cpp \
     Level2button.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
     Replay.cpp \
     Score.cpp \
     SpaceCraft.cpp \
+    Superhen.cpp \
     View.cpp \
     WinImage.cpp \
     main.cpp
@@ -41,6 +43,7 @@ HEADERS += \
     ExitButton.h \
     GameOverImage.h \
     Gift.h \
+    Hen.h \
     Home.h \
     Level1Button.h \
     Level2button.h \
@@ -54,6 +57,7 @@ HEADERS += \
     Replay.h \
     Score.h \
     SpaceCraft.h \
+    Superhen.h \
     View.h \
     WinImage.h
 
