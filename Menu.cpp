@@ -19,7 +19,7 @@ Menu::Menu() : QGraphicsView()
 
     // music
     menuMusic = new QMediaPlayer();
-    menuMusic->setMedia(QUrl("qrc:/music/menu.mp3"));
+    menuMusic->setMedia(QUrl("qrc:/music/test.mp3"));
     menuMusic->play();
 
     // start Timer

@@ -1,4 +1,3 @@
-/* written & directed by sAm mofidian */
 #include "Life.h"
 #include <QFont>
 
@@ -8,6 +7,4 @@ Life::Life(SpaceCraft * space_craft, QGraphicsItem *parent) : QGraphicsTextItem(
     setDefaultTextColor(Qt::white);
     setFont(QFont("times", 22));
 }
-
-/* written & directed by sAm mofidian */
 
