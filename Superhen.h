@@ -24,6 +24,7 @@ class Superhen : public QObject, public QGraphicsPixmapItem
         QTimer * superhentimer;
         /* sAm mofidian */
         Score * sscore;
+        int layers;
         /* sAm mofidian */
 
     public slots:

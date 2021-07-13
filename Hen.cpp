@@ -24,6 +24,9 @@ Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Sco
     hentimer = new QTimer( this );
     hentimer->start(50);
 
+    // init layers
+    layers = 0;
+
 }
 
 Hen::Hen() : QObject(), QGraphicsPixmapItem(), henScene( henScene ), henlives{2}, timeIntervals{0}
@@ -88,6 +91,27 @@ void Hen::henmove()
      {
      setPos( x(), y() + 6 );
      }
+
+     /* sAm mofidian */
+     // layers
+     if(layers % 4 == 0)
+     {
+         setPixmap(QPixmap(":/image/h1.png"));
+     }
+     if(layers % 4 == 1)
+     {
+         setPixmap(QPixmap(":/image/h2.png"));
+     }
+     if(layers % 4 == 2)
+     {
+         setPixmap(QPixmap(":/image/h3.png"));
+     }
+     if(layers % 4 == 3)
+     {
+         setPixmap(QPixmap(":/image/h4.png"));
+     }
+     layers++;
+     /* sAm mofidian */
 }
 
 void Hen::hendecrementLives()

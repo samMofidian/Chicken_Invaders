@@ -29,7 +29,7 @@
         <file>s1.png</file>
         <file>s2.png</file>
         <file>s3.png</file>
-        <file>s5.png</file>
+        <file>s4.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>click.mp3</file>

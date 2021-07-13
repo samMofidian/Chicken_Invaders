@@ -26,6 +26,7 @@ class Hen : public QObject, public QGraphicsPixmapItem
         int timeIntervals;
         /* sAm mofidian */
         Score * hscore;
+        int layers;
         /* sAm mofidian */
 
     public slots:

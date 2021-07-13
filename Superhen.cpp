@@ -10,10 +10,6 @@ Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int 
     // set picture
     setPixmap(QPixmap(":/image/s1.png"));
 
-    // set chicken sound
-    superhenPlayer = new QMediaPlayer();
-    superhenPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
-
     // add to scene
     superhenScene->addItem( this );
 
@@ -24,6 +20,9 @@ Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int 
     // time
     superhentimer = new QTimer( this );
     superhentimer->start(50);
+
+    // init layers
+    layers = 0;
 
 }
 
@@ -88,12 +87,33 @@ void Superhen::superhenmove()
      {
      setPos( x(), y() + 6 );
      }
+
+     /* sAm mofidian */
+     // layers
+     if(layers % 4 == 0)
+     {
+         setPixmap(QPixmap(":/image/s1.png"));
+     }
+     if(layers % 4 == 1)
+     {
+         setPixmap(QPixmap(":/image/s2.png"));
+     }
+     if(layers % 4 == 2)
+     {
+         setPixmap(QPixmap(":/image/s3.png"));
+     }
+     if(layers % 4 == 3)
+     {
+         setPixmap(QPixmap(":/image/s4.png"));
+     }
+     layers++;
+     /* sAm mofidian */
 }
 
 void Superhen::superhendecrementLives()
 {
 
-    -- superhenlives;
+    --superhenlives;
 
     // remove and delete if lives == 0
     if( superhenlives == 0 ){
