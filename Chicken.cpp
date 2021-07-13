@@ -74,6 +74,20 @@ void Chicken::move()
     //setPos( 1000, 0 );
     //if( y() != 450 ){
     setPos( x(), y() + 6 );
+
+    /* sAm mofidian */
+    int layers = 0;
+
+    if (layers % 2 == 0)
+    {
+        setPixmap(QPixmap(":/image/joojeh1.png"));
+    }
+
+    if (layers % 2 == 1)
+    {
+        setPixmap(QPixmap(":/image/joojeh2.png"));
+    }
+    /* sAm mofidian */
     //}
     //}
 }

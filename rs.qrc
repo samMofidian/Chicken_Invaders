@@ -20,6 +20,8 @@
         <file>game_over.png</file>
         <file>win.png</file>
         <file>egg-2.png</file>
+        <file>joojeh1.png</file>
+        <file>joojeh2.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>click.mp3</file>
