@@ -6,9 +6,6 @@
 #include <QGraphicsPixmapItem>
 #include <QTimer>
 #include <Score.h>
-#include <Chicken.h>
-#include <Hen.h>
-#include <Superhen.h>
 
 class Bullet : public QObject, public QGraphicsPixmapItem
 {

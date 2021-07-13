@@ -10,13 +10,11 @@ CONFIG += c++11
 
 SOURCES += \
     Bullet.cpp \
-    Chicken.cpp \
     Controller.cpp \
     Egg.cpp \
     ExitButton.cpp \
     GameOverImage.cpp \
     Gift.cpp \
-    Hen.cpp \
     Home.cpp \
     Level1Button.cpp \
     Level2button.cpp \
@@ -30,20 +28,17 @@ SOURCES += \
     Replay.cpp \
     Score.cpp \
     SpaceCraft.cpp \
-    SuperHen.cpp \
     View.cpp \
     WinImage.cpp \
     main.cpp
 
 HEADERS += \
     Bullet.h \
-    Chicken.h \
     Controller.h \
     Egg.h \
     ExitButton.h \
     GameOverImage.h \
     Gift.h \
-    Hen.h \
     Home.h \
     Level1Button.h \
     Level2button.h \
@@ -57,7 +52,6 @@ HEADERS += \
     Replay.h \
     Score.h \
     SpaceCraft.h \
-    SuperHen.h \
     View.h \
     WinImage.h
 

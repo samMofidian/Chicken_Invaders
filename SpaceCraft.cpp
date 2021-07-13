@@ -1,6 +1,6 @@
 /* written & directed by sAm mofidian*/
-#include "SpaceCraft.h"
 #include "Bullet.h"
+#include "SpaceCraft.h"
 #include <QGraphicsScene>
 #include <QDebug>
 
