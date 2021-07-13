@@ -89,7 +89,7 @@ void Controller::addChick()
             for( int i = 0 ; i < 5 ; i ++ ){
                 chicken[i] = new Chicken*[4];
                 for( int j = 0 ; j < 4 ; j ++ ){
-                chicken[i][j] = new Chicken{scene, holder,1 , ctimer};
+                chicken[i][j] = new Chicken{scene, holder,1 , score, ctimer};
                 int a = 150 * i + 250;
                chicken[i][j]->setPos( a, - 100 * j - 600 );
                if( chicken[i][j]->y() < 300 ){

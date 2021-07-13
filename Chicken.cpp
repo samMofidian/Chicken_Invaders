@@ -3,8 +3,8 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 
-Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, QTimer * timer )
-    : QObject(), QGraphicsPixmapItem( parent ), chickScene( chickScene ), lives{lives}
+Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer )
+    : QObject(), QGraphicsPixmapItem( parent ), chickScene( chickScene ), lives{lives}, cscore(cscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/joojeh1.png"));
@@ -76,6 +76,27 @@ void Chicken::move()
     setPos( x(), y() + 6 );
 
     /* sAm mofidian */
+    QList <QGraphicsItem *> collidingList = collidingItems();
+
+     // decrement live
+     for(size_t i{0}; i < collidingList.size(); ++i)
+     {
+         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+          {
+            (dynamic_cast<SpaceCraft *>(collidingList[i]))->decrementLive();
+
+            // add score
+            cscore->addScore(5);
+
+            // delete
+            scene()->removeItem(this);
+            delete this;
+            return;
+         }
+     }
+    /* sAm mofidian */
+
+    /* sAm mofidian */
     int layers = 0;
 
     if (layers % 2 == 0)
@@ -99,6 +120,9 @@ void Chicken::decrementLives()
 
     // remove and delete if lives == 0
     if( lives == 0 ){
+        /* sAm mofidian */
+        cscore->addScore(5);
+        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }
