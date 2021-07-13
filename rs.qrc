@@ -30,5 +30,6 @@
         <file>level.mp3</file>
         <file>menu.mp3</file>
         <file>crash.mp3</file>
+        <file>chick.mp3</file>
     </qresource>
 </RCC>
