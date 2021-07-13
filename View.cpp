@@ -48,14 +48,6 @@ View::View(int season, int level) : QGraphicsView()
     // add space craft
     viewController->addSpaceCraft();
 
-    /* elham zahir */
-    // connect to schedule
-    connect( vtimer, SIGNAL(timeout()), this, SLOT(schedule()));
-
-    //add chick
-    viewController->addChick();
-    /* elham zahir */
-
 }
 
 void View::pause()
