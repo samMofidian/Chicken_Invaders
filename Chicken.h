@@ -17,6 +17,7 @@ class Chicken : public QObject, public QGraphicsPixmapItem
         Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives, Score * cscore, QTimer * timer, int limitY );
         Chicken();
         ~Chicken();
+        void decrementCount();
 
 
     private:
@@ -25,6 +26,7 @@ class Chicken : public QObject, public QGraphicsPixmapItem
         int lives;
         int limitY;
         int timeIntervals;
+        int count;
         QTimer * timer;
         /* sAm mofidian */
         Score * cscore;

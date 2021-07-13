@@ -48,6 +48,11 @@ Chicken::~Chicken()
     delete chickPlayer;
 }
 
+void Chicken::decrementCount()
+{
+    --count;
+}
+
 void Chicken::move()
 {
     /* written & directed by sAm mofidian */
