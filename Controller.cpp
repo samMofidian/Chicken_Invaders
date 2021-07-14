@@ -215,6 +215,19 @@ void Controller::addChick()
 }
 /* elham zahir */
 
+/* elham zahir, sAm mofidian */
+bool Controller::checkWin()
+{
+    if( Bullet::numberOfChickens == 20 && lvl == 1 ){
+        return true;
+    }
+    else if( Bullet::numberOfChickens == 56 && lvl == 2 ){
+        return true;
+    }
+    return false;
+}
+/* elham zahir, sAm mofidian */
+
 Controller::~Controller()
 {
     delete holder;

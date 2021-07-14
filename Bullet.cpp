@@ -7,6 +7,8 @@
 #include "Score.h"
 #include <QGraphicsScene>
 
+int Bullet::numberOfChickens = 0;
+
 Bullet::Bullet(QGraphicsItem * parent) : QObject(),
     QGraphicsPixmapItem(parent)
 {
@@ -50,7 +52,12 @@ void Bullet::chickSound()
 //    else if(chick->state() == QMediaPlayer::StoppedState)
 //    {
 //        chick->play();
-//    }
+    //    }
+}
+
+void Bullet::setNum(int n)
+{
+    numberOfChickens = n;
 }
 
 void Bullet::moveToUp()
@@ -75,6 +82,9 @@ void Bullet::moveToUp()
 
             // chick sound
             //chickSound();
+
+            // count
+            ++numberOfChickens;
 
             // delete
             scene()->removeItem(this);

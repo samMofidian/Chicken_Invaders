@@ -17,6 +17,7 @@
 #include <Hen.h>
 #include <Superhen.h>
 #include <MeatScore.h>
+#include <Bullet.h>
 
 class Controller : public QObject
 {
@@ -55,7 +56,10 @@ public:
     void addEgg();
     bool game_over();
     void addLife();
+    /* elham zahir */
     void addChick();
+    bool checkWin();
+    /* elham zahir */
 
 signals:
 

@@ -152,9 +152,9 @@ void View::schedule()
         homeButton = new Home(viewController->scene);
 
     }
-/*
+
     // win game
-    if(viewController->game_over() == false)
+    if(viewController->game_over() == false && viewController->checkWin() == true)
     {
         // stop game
         pause();
@@ -175,7 +175,7 @@ void View::schedule()
             nextButton = new Next(viewController->scene , level);
         }
     }
-*/
+
 }
 
 /* written & directed by sAm mofidian */
