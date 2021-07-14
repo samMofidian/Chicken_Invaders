@@ -34,7 +34,9 @@ signals:
 public slots:
 
         void superhenmove();
-        void superhendecrementLives();
+        /* sAm mofidian, elham zahir */
+        void superhendecrementLives(int n);
+        /* sAm mofidian, elham zahir */
 
 };
 

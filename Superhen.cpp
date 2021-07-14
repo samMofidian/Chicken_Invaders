@@ -108,20 +108,22 @@ void Superhen::superhenmove()
      /* sAm mofidian */
 }
 
-void Superhen::superhendecrementLives()
+/* sAm mofidian, elham zahir */
+void Superhen::superhendecrementLives(int n)
 {
-
-    --superhenlives;
+    // decrement chickens lives
+    superhenlives -= n;
 
     // remove and delete if lives == 0
-    if( superhenlives == 0 ){
-        /* sAm mofidian */
+    if( superhenlives < 1 )
+    {
         sscore->addScore(15);
         Bullet::addNum(1);
-        /* sAm mofidian */
+
         scene()->removeItem( this );
         delete this;
     }
 }
+/* sAm mofidian, elham zahir */
 
 /* elham zahir */

@@ -109,20 +109,21 @@ void Hen::henmove()
      /* sAm mofidian */
 }
 
-void Hen::hendecrementLives()
+/* sAm mofidian, elham zahir */
+void Hen::hendecrementLives(int n)
 {
     // decrement chickens lives
-    -- henlives;
+    henlives -= n;
 
     // change the picture if lives == 0
-    if( henlives == 0 ){
-        /* sAm mofidian */
+    if( henlives < 1 )
+    {
         hscore->addScore(10);
         Bullet::addNum(1);
-        /* sAm mofidian */
         scene()->removeItem( this );
         delete this;
     }
 }
+/* sAm mofidian, elham zahir */
 
 /* elham zahir */

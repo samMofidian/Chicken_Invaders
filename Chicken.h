@@ -42,6 +42,7 @@ public slots:
 
         void move();
         void decrementLives();
+
 };
 
 #endif // CHICKEN_H

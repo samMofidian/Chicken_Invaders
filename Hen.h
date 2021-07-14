@@ -35,7 +35,9 @@ signals:
 public slots:
 
         void henmove();
-        void hendecrementLives();
+        /* sAm mofidian, elham zahir */
+        void hendecrementLives(int n);
+        /* sAm mofidian, elham zahir */
 
 };
 
