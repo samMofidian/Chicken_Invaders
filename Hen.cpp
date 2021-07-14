@@ -23,6 +23,9 @@ Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Sco
     // init layers
     layers = 0;
 
+    // init bool
+    existboolean = true;
+
 }
 
 Hen::Hen() : QObject(), QGraphicsPixmapItem(), henScene( henScene ), henlives{2}
@@ -120,10 +123,16 @@ void Hen::hendecrementLives(int n)
     {
         hscore->addScore(10);
         Bullet::addNum(1);
+        existboolean = false;
         scene()->removeItem( this );
         delete this;
     }
 }
 /* sAm mofidian, elham zahir */
+
+bool Hen::exist()
+{
+    return existboolean;
+}
 
 /* elham zahir */

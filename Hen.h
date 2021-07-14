@@ -18,6 +18,7 @@ class Hen : public QObject, public QGraphicsPixmapItem
 
         Hen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer, int limitY );
         Hen();
+        bool exist();
 
     private:
 
@@ -25,6 +26,7 @@ class Hen : public QObject, public QGraphicsPixmapItem
         int henlives;
         QTimer * hentimer;
         int limitY;
+        bool existboolean;
         /* sAm mofidian */
         Score * hscore;
         int layers;
