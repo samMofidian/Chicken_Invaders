@@ -110,7 +110,7 @@ void View::schedule()
         {
             viewController->addGift();
         }
-        if(sec != 0 && sec % 2750 == 0)
+        if(sec != 0 && sec % 4500 == 0)
         {
             viewController->addEgg();
             viewController->addEgg();
@@ -125,8 +125,9 @@ void View::schedule()
         {
             viewController->addGift();
         }
-        if(sec != 0 && sec % 2750 == 0)
+        if(sec != 0 && sec % 5250 == 0)
         {
+            viewController->addEgg();
             viewController->addEgg();
             viewController->addEgg();
         }
@@ -134,7 +135,7 @@ void View::schedule()
     }
 
     // loose game
-    if(viewController->game_over()==true)
+    if(viewController->game_over() == true)
     {
         // stop game
         pause();
