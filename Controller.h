@@ -58,8 +58,11 @@ public:
     void addLife();
     /* elham zahir */
     void addChick();
-    bool checkWin();
     /* elham zahir */
+    /* elham zahir, sAm mofidian */
+    bool checkWin();
+    /* elham zahir, sAm mofidian */
+
 
 signals:
 

@@ -70,6 +70,9 @@ void Superhen::superhenmove()
                 crash->play();
             }
 
+            // add num
+            Bullet::addNum(1);
+
             // delete
             scene()->removeItem(this);
             delete this;
@@ -114,6 +117,7 @@ void Superhen::superhendecrementLives()
     if( superhenlives == 0 ){
         /* sAm mofidian */
         sscore->addScore(15);
+        Bullet::addNum(1);
         /* sAm mofidian */
         scene()->removeItem( this );
         delete this;

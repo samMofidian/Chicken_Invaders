@@ -57,8 +57,13 @@ void Bullet::chickSound()
 
  void Bullet::setNum(int n)
 {
-    numberOfChickens = n;
-}
+     numberOfChickens = n;
+ }
+
+ void Bullet::addNum(int n)
+ {
+     numberOfChickens += n;
+ }
 
 void Bullet::moveToUp()
 {
@@ -84,7 +89,7 @@ void Bullet::moveToUp()
             //chickSound();
 
             // count
-            ++numberOfChickens;
+            //++numberOfChickens;
 
             // delete
             scene()->removeItem(this);
@@ -99,7 +104,7 @@ void Bullet::moveToUp()
             //chickSound();
 
             // count
-            ++numberOfChickens;
+            //++numberOfChickens;
 
             // delete
             scene()->removeItem(this);
@@ -114,7 +119,7 @@ void Bullet::moveToUp()
             //chickSound();
 
             // count
-            ++numberOfChickens;
+            //++numberOfChickens;
 
             // delete
             scene()->removeItem(this);

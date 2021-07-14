@@ -40,15 +40,15 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
     }
     if( lvl == 4 )
     {
-        Bullet::setNum(92);
+        Bullet::setNum(80);
     }
     if( lvl == 5 )
     {
-        Bullet::setNum(152);
+        Bullet::setNum(110);
     }
     if( lvl == 6 )
     {
-        Bullet::setNum(200);
+        Bullet::setNum(128);
     }
 
     /* elham zahir */
@@ -258,23 +258,23 @@ bool Controller::checkWin()
     {
         return true;
     }
-    // 20 + 36 + 36
-    else if( Bullet::numberOfChickens == 92 && lvl == 3 )
+    // 20 + 36 + 24
+    else if( Bullet::numberOfChickens == 80 && lvl == 3 )
     {
         return true;
     }
-    // 20 + 36 + 36 + 60
-    else if( Bullet::numberOfChickens == 152 && lvl == 4 )
+    // 20 + 36 + 24 + 30
+    else if( Bullet::numberOfChickens == 110 && lvl == 4 )
     {
         return true;
     }
     // 20 + 36 + 36 + 60 + 48
-    else if( Bullet::numberOfChickens == 200 && lvl == 5 )
+    else if( Bullet::numberOfChickens == 128 && lvl == 5 )
     {
         return true;
     }
     // 20 + 36 + 36 + 60 + 48 + 108
-    else if( Bullet::numberOfChickens == 308 && lvl == 6 )
+    else if( Bullet::numberOfChickens == 155 && lvl == 6 )
     {
         return true;
     }

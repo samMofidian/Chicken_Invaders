@@ -71,6 +71,9 @@ void Hen::henmove()
                 crash->play();
             }
 
+            // add num
+            Bullet::addNum(1);
+
             // delete
             scene()->removeItem(this);
             delete this;
@@ -115,6 +118,7 @@ void Hen::hendecrementLives()
     if( henlives == 0 ){
         /* sAm mofidian */
         hscore->addScore(10);
+        Bullet::addNum(1);
         /* sAm mofidian */
         scene()->removeItem( this );
         delete this;

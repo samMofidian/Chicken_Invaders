@@ -79,6 +79,9 @@ void Chicken::move()
                     crash->play();
                 }
 
+                // add num
+                Bullet::addNum(1);
+
                 // delete
                 scene()->removeItem(this);
                 delete this;
@@ -115,6 +118,7 @@ void Chicken::decrementLives()
     if( lives == 0 ){
         /* sAm mofidian */
         cscore->addScore(5);
+        Bullet::addNum(1);
         /* sAm mofidian */
         scene()->removeItem( this );
         delete this;

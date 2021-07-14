@@ -23,6 +23,7 @@ public:
     Bullet(int t);
     void chickSound();
     static void setNum(int n);
+    static void addNum(int n);
     /* elham zahir */
     static int numberOfChickens;
     /* elham zahir */

@@ -1,3 +1,4 @@
+/* elham zahir */
 #include "MeatScore.h"
 #include <QFont>
 
@@ -27,3 +28,5 @@ void MeatScore::setMeatScore(int score)
     setDefaultTextColor(Qt::gray);
     setFont(QFont("times", 18));
 }
+
+/* elham zahir */
