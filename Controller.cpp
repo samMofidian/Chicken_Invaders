@@ -169,23 +169,41 @@ void Controller::addChick()
 
     if( lvl == 4 )
     {
-        Hen *** hen = new Hen**[10];
-        for( int i = 0 ; i < 10 ; i ++ )
+        Chicken *** chicken = new Chicken**[4];
+        for( int i = 0 ; i < 4 ; i ++ )
         {
-            hen[i] = new Hen*[3];
+            chicken[i] = new Chicken*[3];
             for( int j = 0 ; j < 3 ; j ++ )
             {
-                hen[i][j] = new Hen{scene, holder,2 ,score, ctimer,  250 - 100 * j };
-                int a = 100 * i + 80;
-                hen[i][j]->setPos( a , - 100 * j - 600 );
-                if( hen[i][j]->y() != 100 * j )
-                {
-                    hen[i][j]->setPos( hen[i][j]->x(), hen[i][j]->y() + 6 );
-                }
+                chicken[i][j] = new Chicken{scene, holder,1 , score, ctimer, 250 - 100 * j };
+                int a = 320 * i + 90;
+                chicken[i][j]->setPos( a, - 100 * j - 600 );
+                chicken[i][j]->move();
             }
          }
-
-    }
+         Hen *** hen1 = new Hen**[3];
+        for( int i = 0 ; i < 3 ; i ++ )
+        {
+            hen1[i] = new Hen*[3];
+            for( int j = 0 ; j < 3 ; j ++ )
+            {
+                hen1[i][j] = new Hen{scene, holder, 2, score, ctimer, 250 - 100 * j };
+                int a = 320 * i + 200;
+                hen1[i][j]->setPos( a , - 100 * j - 600 );
+             }
+         }
+         Hen *** hen2 = new Hen**[3];
+          for( int i = 0 ; i < 3 ; i ++ )
+          {
+                hen2[i] = new Hen*[3];
+                for( int j = 0 ; j < 3 ; j ++ )
+                {
+                    hen2[i][j] = new Hen{scene, holder, 2, score, ctimer, 250 - 100 * j };
+                    int a = 320 * i + 300;
+                    hen2[i][j]->setPos( a , - 100 * j - 600 );
+                }
+           }
+      }
 
     if( lvl == 5 )
     {
@@ -268,12 +286,12 @@ bool Controller::checkWin()
     {
         return true;
     }
-    // 20 + 36 + 36 + 60 + 48
+    // 20 + 36 + 24 + 30 + 18
     else if( Bullet::numberOfChickens == 128 && lvl == 5 )
     {
         return true;
     }
-    // 20 + 36 + 36 + 60 + 48 + 108
+    // 20 + 36 + 24 + 30 + 18 + 27
     else if( Bullet::numberOfChickens == 155 && lvl == 6 )
     {
         return true;
