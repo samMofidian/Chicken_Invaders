@@ -13,7 +13,6 @@ Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int 
     // add to scene
     superhenScene->addItem( this );
 
-
     // connect timer to move
     connect( superhentimer, SIGNAL(timeout()), this, SLOT(superhenmove()) );
 
@@ -41,11 +40,6 @@ Superhen::Superhen() : QObject(), QGraphicsPixmapItem(), superhenScene( superhen
     // connect timer to move
     connect( superhentimer, SIGNAL(timeout()), this, SLOT(move()) );
 
-}
-
-Superhen::~Superhen()
-{
-    delete superhenPlayer;
 }
 
 void Superhen::superhenmove()
@@ -79,6 +73,7 @@ void Superhen::superhenmove()
             // delete
             scene()->removeItem(this);
             delete this;
+            return;
          }
      }
      /* written & directed by sAm mofidian */

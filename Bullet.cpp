@@ -40,17 +40,17 @@ Bullet::Bullet(int t)
 
 void Bullet::chickSound()
 {
-    QMediaPlayer* chick = new QMediaPlayer();
-    chick->setMedia(QUrl("qrc:/music/chick.mp3"));
+//    QMediaPlayer* chick = new QMediaPlayer();
+//    chick->setMedia(QUrl("qrc:/music/chick.mp3"));
 
-    if(chick->state() == QMediaPlayer::PlayingState)
-    {
-        chick->setPosition(0);
-    }
-    else if(chick->state() == QMediaPlayer::StoppedState)
-    {
-        chick->play();
-    }
+//    if(chick->state() == QMediaPlayer::PlayingState)
+//    {
+//        chick->setPosition(0);
+//    }
+//    else if(chick->state() == QMediaPlayer::StoppedState)
+//    {
+//        chick->play();
+//    }
 }
 
 void Bullet::moveToUp()
@@ -74,7 +74,7 @@ void Bullet::moveToUp()
             (dynamic_cast<Chicken *>(collidingList[i]))->decrementLives();
 
             // chick sound
-            chickSound();
+            //chickSound();
 
             // delete
             scene()->removeItem(this);
@@ -86,7 +86,7 @@ void Bullet::moveToUp()
             (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives();
 
             // chick sound
-            chickSound();
+            //chickSound();
 
             // delete
             scene()->removeItem(this);
@@ -98,14 +98,14 @@ void Bullet::moveToUp()
             (dynamic_cast<Superhen *>(collidingList[i]))->superhendecrementLives();
 
             // chick sound
-            chickSound();
+            //chickSound();
 
             // delete
             scene()->removeItem(this);
             delete this;
         }
-    }
 
+    }
 
     // pos
     setPos(x(), y() - 40);

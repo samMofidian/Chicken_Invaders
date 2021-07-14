@@ -33,6 +33,7 @@ SOURCES += \
     Superhen.cpp \
     View.cpp \
     WinImage.cpp \
+    heart.cpp \
     main.cpp
 
 HEADERS += \
@@ -59,7 +60,8 @@ HEADERS += \
     SpaceCraft.h \
     Superhen.h \
     View.h \
-    WinImage.h
+    WinImage.h \
+    heart.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

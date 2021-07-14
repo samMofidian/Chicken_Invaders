@@ -5,14 +5,10 @@
 #include <QGraphicsScene>
 
 Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer, int limitY )
-    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{2}, timeIntervals{0}, hscore(hscore), limitY{limitY}
+    : QObject(), QGraphicsPixmapItem( parent ), henScene( henScene ), henlives{2}, hscore(hscore), limitY{limitY}
 {
     // set picture
-    setPixmap(QPixmap(":/image/1.png"));
-
-    // set chicken sound
-    henPlayer = new QMediaPlayer();
-    henPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
+    setPixmap(QPixmap(":/image/h1.png"));
 
     // add to scene
     chickScene->addItem( this );
@@ -29,10 +25,10 @@ Hen::Hen( QGraphicsScene * chickScene, QGraphicsItem * parent, int henlives, Sco
 
 }
 
-Hen::Hen() : QObject(), QGraphicsPixmapItem(), henScene( henScene ), henlives{2}, timeIntervals{0}
+Hen::Hen() : QObject(), QGraphicsPixmapItem(), henScene( henScene ), henlives{2}
 {
     // set picture
-    setPixmap(QPixmap(":/image/1.png"));
+    setPixmap(QPixmap(":/image/h1.png"));
 
     // add to scene
     henScene->addItem( this );
@@ -44,11 +40,6 @@ Hen::Hen() : QObject(), QGraphicsPixmapItem(), henScene( henScene ), henlives{2}
     // connect timer to move
     connect( hentimer, SIGNAL(timeout()), this, SLOT(move()) );
 
-}
-
-Hen::~Hen()
-{
-    delete henPlayer;
 }
 
 void Hen::henmove()
@@ -83,6 +74,7 @@ void Hen::henmove()
             // delete
             scene()->removeItem(this);
             delete this;
+            return;
          }
      }
      /* written & directed by sAm mofidian */

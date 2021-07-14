@@ -11,14 +11,15 @@
 class Superhen : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
-    public:
+
+public:
+
         Superhen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * sscore, QTimer * hentimer, int limitY );
         Superhen();
-        ~Superhen();
 
-    private:
+private:
+
         QGraphicsScene * superhenScene;
-        QMediaPlayer * superhenPlayer;
         int superhenlives;
         int limitY;
         QTimer * superhentimer;
@@ -27,11 +28,14 @@ class Superhen : public QObject, public QGraphicsPixmapItem
         int layers;
         /* sAm mofidian */
 
-    public slots:
+signals:
+
+
+public slots:
+
         void superhenmove();
         void superhendecrementLives();
 
-    signals:
 };
 
 #endif // SUPERHEN_H

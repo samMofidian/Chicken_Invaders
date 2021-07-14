@@ -71,7 +71,7 @@ void Controller::addChick()
             for( int i = 0 ; i < 5 ; i ++ ){
                 chicken[i] = new Chicken*[4];
                 for( int j = 0 ; j < 4 ; j ++ ){
-                chicken[i][j] = new Chicken{scene, holder, 1, score, ctimer, 350 - 100 * j };
+                chicken[i][j] = new Chicken{scene, holder,1 ,score, ctimer,  350 - 100 * j };
                 int a = 150 * i + 250;
                chicken[i][j]->setPos( a, - 100 * j - 600 );
                chicken[i][j]->move();
@@ -83,7 +83,7 @@ void Controller::addChick()
             for( int i = 0 ; i < 9 ; i ++ ){
                 chicken[i] = new Chicken*[4];
                 for( int j = 0 ; j < 4 ; j ++ ){
-                chicken[i][j] = new Chicken{scene, holder, 1, score, ctimer, 350 - 100 * j };
+                chicken[i][j] = new Chicken{scene, holder,1 ,score, ctimer,  350 - 100 * j };
                 int a = 120 * i + 90;
                chicken[i][j]->setPos( a, - 100 * j - 600 );
                chicken[i][j]->move();
@@ -91,26 +91,36 @@ void Controller::addChick()
         }
         }
         if( lvl == 3 ){
-                Hen *** hen = new Hen**[4];
-                Chicken *** chicken = new Chicken**[4];
-                for( int i = 0 ; i < 4 ; i ++ ){
-                    hen[i] = new Hen*[3];
-                    for( int j = 0 ; j < 3 ; j ++ ){
-                    hen[i][j] = new Hen{scene, holder, 2, score, ctimer, 250 - 100 * j };
-                    int a = 240 * i + 120;
-                    if( j % 2 == 0 )
-                        a += 120;
-                    hen[i][j]->setPos( a , - 100 * j - 600 );
-                    }
-                }
+        Hen *** hen = new Hen**[4];
+        Chicken *** chicken = new Chicken**[4];
+        for( int i = 0 ; i < 4 ; i ++ ){
+            hen[i] = new Hen*[3];
+            for( int j = 0 ; j < 3 ; j ++ ){
+            hen[i][j] = new Hen{scene, holder,2 ,score,ctimer,  250 - 100 * j };
+            int a = 240 * i + 120;
+            if( j % 2 == 0 )
+                a += 120;
+            hen[i][j]->setPos( a , - 100 * j - 600 );
+            }
         }
 
+        for( int i = 0 ; i < 4 ; i ++ ){
+            chicken[i] = new Chicken*[3];
+            for( int j = 0 ; j < 3 ; j ++ ){
+            chicken[i][j] = new Chicken{scene, holder,1 , score, ctimer,  250 - 100 * j };
+            int a = 240 * i + 120;
+            if( j % 2 == 1 )
+                a += 120;
+            chicken[i][j]->setPos( a , - 100 * j - 600 );
+            }
+           }
+          }
         if( lvl == 4 ){
             Hen *** hen = new Hen**[10];
             for( int i = 0 ; i < 10 ; i ++ ){
                 hen[i] = new Hen*[3];
                 for( int j = 0 ; j < 3 ; j ++ ){
-                hen[i][j] = new Hen{scene, holder,2 , score, ctimer,  250 - 100 * j };
+                hen[i][j] = new Hen{scene, holder,2 ,score, ctimer,  250 - 100 * j };
                 int a = 100 * i + 80;
                hen[i][j]->setPos( a , - 100 * j - 600 );
                if( hen[i][j]->y() != 100 * j ){
@@ -124,7 +134,7 @@ void Controller::addChick()
             for( int i = 0 ; i < 3 ; i ++ ){
                 superhen[i] = new Superhen*[3];
                 for( int j = 0 ; j < 3 ; j ++ ){
-                superhen[i][j] = new Superhen{scene, holder,4 , score, ctimer, 250 - 100 * j };
+                superhen[i][j] = new Superhen{scene, holder,4 ,score, ctimer, 250 - 100 * j };
                 int k;
                 if( j % 2 == 0 )
                     k = 60;
@@ -138,7 +148,7 @@ void Controller::addChick()
                for( int i = 0 ; i < 3 ; i ++ ){
                    hen[i] = new Hen*[3];
                    for( int j = 0 ; j < 3 ; j ++ ){
-                   hen[i][j] = new Hen{scene, holder,3 , score, ctimer, 250 - 100 * j };
+                   hen[i][j] = new Hen{scene, holder,3 ,score, ctimer, 250 - 100 * j };
                    int k;
                    if( j % 2 == 1 )
                        k = 60;
@@ -154,14 +164,14 @@ void Controller::addChick()
             for( int i = 0 ; i < 9 ; i ++ ){
                 superhen[i] = new Superhen*[3];
                 for( int j = 0 ; j < 3 ; j ++ ){
-                superhen[i][j] = new Superhen{scene, holder,4 , score, ctimer, 250 - 100 * j };
+                superhen[i][j] = new Superhen{scene, holder,4 ,score, ctimer, 250 - 100 * j };
                 int a = 120 * i + 90;
                superhen[i][j]->setPos( a , - 100 * j - 600 );
                if( superhen[i][j]->y() != 100 * j ){
                superhen[i][j]->setPos( superhen[i][j]->x(), superhen[i][j]->y() + 6 );
-                }
             }
-}
+            }
+            }
         }
 }
 /* elham zahir */

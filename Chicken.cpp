@@ -10,11 +10,9 @@ Chicken::Chicken( QGraphicsScene * chickScene, QGraphicsItem * parent, int lives
     // set picture
     setPixmap(QPixmap(":/image/joojeh1.png"));
 
-    // set chicken sound
-    chickPlayer = new QMediaPlayer();
-    chickPlayer->setMedia(QUrl("qrc:/music/test.mp3"));
-
     // add to scene
+    int sec = 0;
+    sec ++;
     chickScene->addItem( this );
 
     // connect timer to move
@@ -43,11 +41,9 @@ Chicken::Chicken() : QObject(), QGraphicsPixmapItem(), chickScene( chickScene ),
     // connect timer to move
     connect( timer, SIGNAL(timeout()), this, SLOT(move()) );
 
-}
+    // init limit
+    this->limitY = limitY;
 
-Chicken::~Chicken()
-{
-    delete chickPlayer;
 }
 
 void Chicken::decrementCount()
@@ -86,7 +82,7 @@ void Chicken::move()
                 // delete
                 scene()->removeItem(this);
                 delete this;
-
+                return;
           }
     }
      /* written & directed by sAm mofidian */

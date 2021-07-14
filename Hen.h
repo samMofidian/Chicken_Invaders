@@ -11,29 +11,32 @@
 
 class Hen : public QObject, public QGraphicsPixmapItem
 {
+
     Q_OBJECT
+
     public:
+
         Hen( QGraphicsScene * henScene, QGraphicsItem * parent, int henlives, Score * hscore, QTimer * hentimer, int limitY );
         Hen();
-        ~Hen();
 
     private:
+
         QGraphicsScene * henScene;
-        QMediaPlayer * henPlayer;
         int henlives;
         QTimer * hentimer;
         int limitY;
-        int timeIntervals;
         /* sAm mofidian */
         Score * hscore;
         int layers;
         /* sAm mofidian */
 
-    public slots:
+signals:
+
+public slots:
+
         void henmove();
         void hendecrementLives();
 
-    signals:
 };
 
 #endif // HEN_H
