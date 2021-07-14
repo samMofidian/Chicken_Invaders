@@ -33,26 +33,32 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
     if( lvl == 1 )
     {
         Bullet::setNum(0);
+        SpaceCraft::setShotType(1);
     }
     if( lvl == 2 )
     {
         Bullet::setNum(20);
+        SpaceCraft::setShotType(1);
     }
     if( lvl == 3 )
     {
         Bullet::setNum(56);
+        SpaceCraft::setShotType(1);
     }
     if( lvl == 4 )
     {
         Bullet::setNum(80);
+        SpaceCraft::setShotType(1);
     }
     if( lvl == 5 )
     {
         Bullet::setNum(110);
+        SpaceCraft::setShotType(1);
     }
     if( lvl == 6 )
     {
         Bullet::setNum(128);
+        SpaceCraft::setShotType(1);
     }
 
 

@@ -91,6 +91,11 @@ int SpaceCraft::getLives()
     return lives;
 }
 
+void SpaceCraft::setShotType(int n)
+{
+    shotType = n;
+}
+
 int SpaceCraft::getShotType()
 {
     return shotType;
