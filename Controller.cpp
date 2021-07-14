@@ -155,6 +155,12 @@ void Controller::addChick()
                 if( j % 2 == 0 )
                     a += 120;
                 hen[i][j]->setPos( a , - 100 * j - 600 );
+                int x = hen[i][j]->x();
+                int y = hen[i][j]->y();
+                if( hen[i][j]->exist() == true )
+                {
+                    Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
+                }
             }
         }
 
@@ -168,6 +174,7 @@ void Controller::addChick()
                 if( j % 2 == 1 )
                     a += 120;
                 chicken[i][j]->setPos( a , - 100 * j - 600 );
+                chicken[i][j]->move();
             }
          }
      }
@@ -195,6 +202,12 @@ void Controller::addChick()
                 hen1[i][j] = new Hen{scene, holder, 2, score, ctimer, 250 - 100 * j };
                 int a = 320 * i + 200;
                 hen1[i][j]->setPos( a , - 100 * j - 600 );
+                int x = hen1[i][j]->x();
+                int y = hen1[i][j]->y();
+                if( hen1[i][j]->exist() == true )
+                {
+                    Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
+                }
              }
          }
          Hen *** hen2 = new Hen**[3];
@@ -206,6 +219,13 @@ void Controller::addChick()
                     hen2[i][j] = new Hen{scene, holder, 2, score, ctimer, 250 - 100 * j };
                     int a = 320 * i + 300;
                     hen2[i][j]->setPos( a , - 100 * j - 600 );
+                    int x = hen2[i][j]->x();
+                    int y = hen2[i][j]->y();
+                    hen2[i][j]->henmove();
+                    if( hen2[i][j]->exist() == true )
+                    {
+                        Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
+                    }
                 }
            }
       }
@@ -226,6 +246,13 @@ void Controller::addChick()
                     k = - 60;
                 int a = 240 * i + 280;
                 superhen[i][j]->setPos( a + k , - 100 * j - 600 );
+                int x = superhen[i][j]->x();
+                int y = superhen[i][j]->y();
+                superhen[i][j]->superhenmove();
+                if( superhen[i][j]->exist() == true )
+                {
+                    Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
+                }
             }
          }
          Hen *** hen = new Hen**[3];
@@ -242,6 +269,13 @@ void Controller::addChick()
                        k = - 60;
                    int a = 240 * i + 280;
                    hen[i][j]->setPos( a + k , - 100 * j - 600 );
+                   int x = hen[i][j]->x();
+                   int y = hen[i][j]->y();
+                   hen[i][j]->henmove();
+                   if( hen[i][j]->exist() == true )
+                   {
+                        Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
+                   }
                 }
           }
     }
