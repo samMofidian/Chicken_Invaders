@@ -51,6 +51,7 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
         Bullet::setNum(128);
     }
 
+
     /* elham zahir */
     // meat
     if( lvl >= 3 )

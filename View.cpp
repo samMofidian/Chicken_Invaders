@@ -104,7 +104,7 @@ void View::schedule()
     // level 5
     if (season == 3 && level == 5)
     {
-        if(sec != 0 && sec % 15000 == 0)
+        if(sec != 0 && sec % 15000 == 0 && SpaceCraft::getShotType() != 2) // stop add gift after you got it
         {
             viewController->addGift();
         }
@@ -118,7 +118,7 @@ void View::schedule()
     // level 6
     if (season == 3 && level == 6)
     {
-        if(sec != 0 && sec % 15000 == 0)
+        if(sec != 0 && sec % 15000 == 0 && SpaceCraft::getShotType() != 2) // stop add gift after you got it
         {
             viewController->addGift();
         }
