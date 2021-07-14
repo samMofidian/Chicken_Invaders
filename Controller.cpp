@@ -157,7 +157,7 @@ void Controller::addChick()
                 hen[i][j]->setPos( a , - 100 * j - 600 );
                 int x = hen[i][j]->x();
                 int y = hen[i][j]->y();
-                if( hen[i][j]->exist() == true )
+                if( hen[i][j]->exist() == false )
                 {
                     Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                 }
@@ -204,7 +204,7 @@ void Controller::addChick()
                 hen1[i][j]->setPos( a , - 100 * j - 600 );
                 int x = hen1[i][j]->x();
                 int y = hen1[i][j]->y();
-                if( hen1[i][j]->exist() == true )
+                if( hen1[i][j]->exist() == false )
                 {
                     Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                 }
@@ -222,7 +222,7 @@ void Controller::addChick()
                     int x = hen2[i][j]->x();
                     int y = hen2[i][j]->y();
                     hen2[i][j]->henmove();
-                    if( hen2[i][j]->exist() == true )
+                    if( hen2[i][j]->exist() == false )
                     {
                         Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                     }
@@ -249,7 +249,7 @@ void Controller::addChick()
                 int x = superhen[i][j]->x();
                 int y = superhen[i][j]->y();
                 superhen[i][j]->superhenmove();
-                if( superhen[i][j]->exist() == true )
+                if( superhen[i][j]->exist() == false )
                 {
                     Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                 }
@@ -272,7 +272,7 @@ void Controller::addChick()
                    int x = hen[i][j]->x();
                    int y = hen[i][j]->y();
                    hen[i][j]->henmove();
-                   if( hen[i][j]->exist() == true )
+                   if( hen[i][j]->exist() == false )
                    {
                         Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                    }
