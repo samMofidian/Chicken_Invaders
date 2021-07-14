@@ -89,5 +89,10 @@ int SpaceCraft::getLives()
     return lives;
 }
 
+int SpaceCraft::getShotType()
+{
+    return shotType;
+}
+
 /* written & directed by sAm mofidian*/
 

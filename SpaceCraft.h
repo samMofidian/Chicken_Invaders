@@ -35,6 +35,7 @@ public:
     void mouseMoveEvent(QGraphicsSceneMouseEvent * event);
     void changeShotType();
     int getLives();
+    static int getShotType();
 
 signals:
 

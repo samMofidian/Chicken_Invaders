@@ -5,6 +5,7 @@
 #include "Hen.h"
 #include "Superhen.h"
 #include "Score.h"
+#include "SpaceCraft.h"
 #include <QGraphicsScene>
 
 int Bullet::numberOfChickens = 0;
@@ -55,15 +56,15 @@ void Bullet::chickSound()
     //    }
 }
 
- void Bullet::setNum(int n)
+void Bullet::setNum(int n)
 {
      numberOfChickens = n;
- }
+}
 
- void Bullet::addNum(int n)
- {
+void Bullet::addNum(int n)
+{
      numberOfChickens += n;
- }
+}
 
 void Bullet::moveToUp()
 {
@@ -96,6 +97,7 @@ void Bullet::moveToUp()
             delete this;
         }
 
+        if(SpaceCra)
         if(typeid(*(collidingList)[i]) == typeid(Hen))
         {
             (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives();
