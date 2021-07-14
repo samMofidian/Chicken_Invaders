@@ -315,7 +315,7 @@ void Controller::addChick()
                 superhen[i][j]->superhenmove();
                 int x = superhen[i][j]->x();
                 int y = superhen[i][j]->y();
-                if( superhen[i][j]->exist() == true )
+                if( superhen[i][j]->exist() == false )
                 {
                        Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                 }

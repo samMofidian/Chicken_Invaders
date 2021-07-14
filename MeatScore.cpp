@@ -2,7 +2,7 @@
 #include "MeatScore.h"
 #include <QFont>
 
-int MeatScore::meatscore = 0;
+int MeatScore::meatscore = 29;
 
 MeatScore::MeatScore(Score * mscore, QGraphicsItem *parent) : QGraphicsTextItem(parent), mscore(mscore)
 {
