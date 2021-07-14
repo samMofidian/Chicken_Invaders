@@ -144,7 +144,7 @@ void View::schedule()
 
         // replay and home buttons
         replayButton = new Replay(viewController->scene, season, level);
-        homeButton = new Home(viewController->scene);
+        homeButton = new Home(viewController->scene, false);
 
     }
 
@@ -161,13 +161,19 @@ void View::schedule()
         // win image
         win = new WinImage(viewController->scene);
 
-        // home button
-        homeButton = new Home(viewController->scene);
-
-        if(level!=6)
+        // check is level 6
+        if(level !=6 )
         {
+            // home button
+            homeButton = new Home(viewController->scene, false);
+
             // next button
             nextButton = new Next(viewController->scene , level);
+        }
+        if(level == 6)
+        {
+            // home button
+            homeButton = new Home(viewController->scene, true);
         }
     }
 

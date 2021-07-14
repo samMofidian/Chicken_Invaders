@@ -19,7 +19,7 @@ private:
 
 public:
 
-    Home(QGraphicsScene * scene);
+    Home(QGraphicsScene * scene, bool islvl6);
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
     ~Home();
 };

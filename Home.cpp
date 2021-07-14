@@ -3,7 +3,7 @@
 #include "View.h"
 #include "Menu.h"
 
-Home::Home(QGraphicsScene * scene) : homeScene{scene}
+Home::Home(QGraphicsScene * scene, bool islvl6) : homeScene{scene}
 {
     // init click
     click = false ;
@@ -15,7 +15,15 @@ Home::Home(QGraphicsScene * scene) : homeScene{scene}
     scene->addItem(this);
 
     // pos
-    setPos(500, 575);
+    if(islvl6 == false)
+    {
+       setPos(500, 575);
+    }
+    if(islvl6 == true)
+    {
+        setPos(562.5, 575);
+    }
+
 
     // music
     homeMusic = new QMediaPlayer();
