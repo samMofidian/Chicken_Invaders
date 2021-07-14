@@ -5,7 +5,7 @@ MeatScore::MeatScore(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
     meatscore = 0;
     setPlainText(QString("MEAT: ") + QString::number(meatscore));
-    setDefaultTextColor(Qt::white);
+    setDefaultTextColor(Qt::gray);
     setFont(QFont("times", 18));
 }
 
@@ -24,6 +24,6 @@ void MeatScore::setMeatScore(int score)
 {
     meatscore = score;
     setPlainText(QString("MEAT: ") + QString::number(meatscore));
-    setDefaultTextColor(Qt::white);
+    setDefaultTextColor(Qt::gray);
     setFont(QFont("times", 18));
 }
