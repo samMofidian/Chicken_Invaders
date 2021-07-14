@@ -27,7 +27,7 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
 
     // timer
     ctimer = new QTimer();
-    ctimer->start(40);
+    ctimer->start(40);   
 
 }
 

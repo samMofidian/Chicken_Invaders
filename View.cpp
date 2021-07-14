@@ -87,6 +87,7 @@ void View::schedule()
         if(sec != 0 && sec % 800 == 0)
         {
             viewController->addEgg();
+            viewController->addEgg();
         }
         sec += 100;
     }
@@ -96,6 +97,7 @@ void View::schedule()
     {
         if(sec != 0 && sec % 800 == 0)
         {
+            viewController->addEgg();
             viewController->addEgg();
         }
         sec += 100;
@@ -108,6 +110,11 @@ void View::schedule()
         {
             viewController->addGift();
         }
+        if(sec != 0 && sec % 3900 == 0)
+        {
+            viewController->addEgg();
+            viewController->addEgg();
+        }
         sec += 750;
     }
 
@@ -117,6 +124,11 @@ void View::schedule()
         if(sec != 0 && sec % 15000 == 0)
         {
             viewController->addGift();
+        }
+        if(sec != 0 && sec % 3900 == 0)
+        {
+            viewController->addEgg();
+            viewController->addEgg();
         }
         sec += 750;
     }
