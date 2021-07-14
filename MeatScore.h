@@ -4,13 +4,15 @@
 
 
 #include <QGraphicsSimpleTextItem>
+#include <Score.h>
 
 class MeatScore : public QGraphicsTextItem
 {
 
 private:
 
-    int meatscore;
+    static int meatscore;
+
 
 public:
 

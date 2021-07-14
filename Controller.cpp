@@ -66,7 +66,7 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
     // meat
     if( lvl >= 3 )
     {
-        meatscore = new MeatScore();
+        meatscore = new MeatScore(score);
         scene->addItem(meatscore);
         meatscore->setPos(140, 660);
     }

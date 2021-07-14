@@ -2,6 +2,8 @@
 #include "MeatScore.h"
 #include <QFont>
 
+int MeatScore::meatscore = 0;
+
 MeatScore::MeatScore(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
     meatscore = 0;
@@ -13,6 +15,12 @@ MeatScore::MeatScore(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 void MeatScore::addMeatScore(int score)
 {
     meatscore += score;
+
+    if( meatscore == 30 )
+    {
+        meatscore = 0;
+    }
+
     setPlainText(QString("MEAT: ") + QString::number(meatscore));
 }
 
