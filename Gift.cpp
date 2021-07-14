@@ -37,7 +37,7 @@ void Gift::move()
     ++timeIntervals;
     setPos(x() , y() + 30);
 
-    if(timeIntervals == 25 || y() > 745)
+    if(timeIntervals == 24 || y() > 745)
     {
         giftScene->removeItem(this);
         delete this;

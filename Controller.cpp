@@ -30,6 +30,10 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
     ctimer->start(40);
 
     // set win (start random level)
+    if( lvl == 1 )
+    {
+        Bullet::setNum(0);
+    }
     if( lvl == 2 )
     {
         Bullet::setNum(20);
