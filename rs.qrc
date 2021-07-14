@@ -30,6 +30,7 @@
         <file>s2.png</file>
         <file>s3.png</file>
         <file>s4.png</file>
+        <file>meat.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>click.mp3</file>
