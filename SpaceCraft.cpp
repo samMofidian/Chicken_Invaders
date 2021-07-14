@@ -5,6 +5,8 @@
 #include <QGraphicsScene>
 #include <QDebug>
 
+int SpaceCraft::shotType = 1;
+
 SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QObject(),
     QGraphicsPixmapItem(parent), craftScene{craftScene}
 {
@@ -15,7 +17,7 @@ SpaceCraft::SpaceCraft(QGraphicsScene * craftScene, QGraphicsItem *parent) : QOb
     setPos(550, 560);
 
     // init shot type
-    shotType = 1;
+    //shotType = 1;
 
     // init lives
     lives = 3;

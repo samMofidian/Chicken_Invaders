@@ -21,7 +21,7 @@ private:
     int lives;
     QGraphicsScene * craftScene;
     bool click;
-    int shotType;
+    static int shotType;
     QTimer * stimer;
     Bullet * bullet;
 

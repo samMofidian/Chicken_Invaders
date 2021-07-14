@@ -97,10 +97,18 @@ void Bullet::moveToUp()
             delete this;
         }
 
-        if(SpaceCra)
         if(typeid(*(collidingList)[i]) == typeid(Hen))
         {
-            (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives();
+            // decrement live
+            if(SpaceCraft::getShotType() == 1)
+            {
+               (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives(1);
+            }
+
+            else if(SpaceCraft::getShotType() == 2)
+            {
+               (dynamic_cast<Hen *>(collidingList[i]))->hendecrementLives(2);
+            }
 
             // chick sound
             //chickSound();
@@ -115,7 +123,16 @@ void Bullet::moveToUp()
 
         if(typeid(*(collidingList)[i]) == typeid(Superhen))
         {
-            (dynamic_cast<Superhen *>(collidingList[i]))->superhendecrementLives();
+            // decrement live
+            if(SpaceCraft::getShotType() == 1)
+            {
+               (dynamic_cast<Superhen *>(collidingList[i]))->superhendecrementLives(1);
+            }
+
+            else if(SpaceCraft::getShotType() == 2)
+            {
+               (dynamic_cast<Superhen *>(collidingList[i]))->superhendecrementLives(2);
+            }
 
             // chick sound
             //chickSound();
