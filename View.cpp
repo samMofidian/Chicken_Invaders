@@ -84,7 +84,7 @@ void View::schedule()
     // level 3
     if (season == 2 && level == 3)
     {
-        if(sec != 0 && sec % 800 == 0)
+        if(sec != 0 && sec % 500 == 0)
         {
             viewController->addEgg();
             viewController->addEgg();
@@ -95,7 +95,7 @@ void View::schedule()
     // level 4
     if (season == 2 && level == 4)
     {
-        if(sec != 0 && sec % 800 == 0)
+        if(sec != 0 && sec % 500 == 0)
         {
             viewController->addEgg();
             viewController->addEgg();
@@ -110,7 +110,7 @@ void View::schedule()
         {
             viewController->addGift();
         }
-        if(sec != 0 && sec % 3900 == 0)
+        if(sec != 0 && sec % 2750 == 0)
         {
             viewController->addEgg();
             viewController->addEgg();
@@ -125,7 +125,7 @@ void View::schedule()
         {
             viewController->addGift();
         }
-        if(sec != 0 && sec % 3900 == 0)
+        if(sec != 0 && sec % 2750 == 0)
         {
             viewController->addEgg();
             viewController->addEgg();
