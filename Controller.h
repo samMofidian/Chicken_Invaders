@@ -16,6 +16,7 @@
 #include <Chicken.h>
 #include <Hen.h>
 #include <Superhen.h>
+#include <MeatScore.h>
 
 class Controller : public QObject
 {
@@ -42,6 +43,7 @@ private:
     QList<Hen *>henList;
     QList<Superhen *>superhenList;
     int chickLives;
+    MeatScore * meatscore;
     /* elham zahir */
 
 public:
