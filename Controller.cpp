@@ -34,7 +34,7 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
     {
         meatscore = new MeatScore();
         scene->addItem(meatscore);
-        meatscore->setPos(150, 670);
+        meatscore->setPos(140, 660);
     }
 
 }
