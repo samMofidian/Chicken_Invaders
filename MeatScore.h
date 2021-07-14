@@ -12,11 +12,11 @@ class MeatScore : public QGraphicsTextItem
 private:
 
     static int meatscore;
-
+    Score * mscore;
 
 public:
 
-    MeatScore(QGraphicsItem * parent = 0);
+    MeatScore(Score * mscore, QGraphicsItem * parent = 0);
     void addMeatScore(int s);
     int getMeatScore();
     void setMeatScore(int score);

@@ -4,7 +4,7 @@
 
 int MeatScore::meatscore = 0;
 
-MeatScore::MeatScore(QGraphicsItem *parent) : QGraphicsTextItem(parent)
+MeatScore::MeatScore(Score * mscore, QGraphicsItem *parent) : QGraphicsTextItem(parent), mscore(mscore)
 {
     meatscore = 0;
     setPlainText(QString("MEAT: ") + QString::number(meatscore));
@@ -19,6 +19,7 @@ void MeatScore::addMeatScore(int score)
     if( meatscore == 30 )
     {
         meatscore = 0;
+        mscore->addScore(50);
     }
 
     setPlainText(QString("MEAT: ") + QString::number(meatscore));
