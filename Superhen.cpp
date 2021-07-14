@@ -23,6 +23,8 @@ Superhen::Superhen( QGraphicsScene * superhenScene, QGraphicsItem * parent, int 
     // init layers
     layers = 0;
 
+    // init exist
+    existboolean = true;
 }
 
 Superhen::Superhen() : QObject(), QGraphicsPixmapItem(), superhenScene( superhenScene ), superhenlives{4}
@@ -40,6 +42,14 @@ Superhen::Superhen() : QObject(), QGraphicsPixmapItem(), superhenScene( superhen
     // connect timer to move
     connect( superhentimer, SIGNAL(timeout()), this, SLOT(move()) );
 
+    // set bool
+    setBoolean( existboolean );
+
+}
+
+bool Superhen::exist()
+{
+    return existboolean;
 }
 
 void Superhen::superhenmove()
@@ -125,5 +135,12 @@ void Superhen::superhendecrementLives(int n)
     }
 }
 /* sAm mofidian, elham zahir */
+
+void Superhen::setBoolean( bool existboolean )
+{
+    this->existboolean = existboolean;
+}
+
+
 
 /* elham zahir */

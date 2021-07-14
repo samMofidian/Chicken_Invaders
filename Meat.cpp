@@ -2,9 +2,11 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 #include <QFont>
+#include "SpaceCraft.h"
+#include "MeatScore.h"
 
-Meat::Meat( QGraphicsScene * meatScene, QTimer * meattimer, int limitX, int limitY, QGraphicsItem * parent )
-    : QObject(), QGraphicsPixmapItem(parent), meatScene( meatScene ), limitX{limitX}, limitY{limitY}
+Meat::Meat( QGraphicsScene * meatScene, QTimer * meattimer, MeatScore * meatscore, int limitX, int limitY, QGraphicsItem * parent )
+    : QObject(), QGraphicsPixmapItem(parent), meatScene( meatScene ), limitX{limitX}, limitY{limitY}, meatscore(meatscore)
 {
     // set picture
     setPixmap(QPixmap(":/image/meat.png"));
@@ -19,11 +21,11 @@ Meat::Meat( QGraphicsScene * meatScene, QTimer * meattimer, int limitX, int limi
     meattimer = new QTimer( this );
     meattimer->start(50);
 
+    // pos
     setPos( limitX, limitY );
 }
 
-Meat::Meat()
-: QObject(), QGraphicsPixmapItem(), meatScene( meatScene )
+Meat::Meat() : QObject(), QGraphicsPixmapItem(), meatScene( meatScene )
 {
     // set picture
     setPixmap(QPixmap(":/image/meat.png"));
@@ -38,6 +40,7 @@ Meat::Meat()
     // connect timer to move
     connect( meattimer, SIGNAL(timeout()), this, SLOT(meatmove()) );
 
+    // pos
     setPos( limitX, limitY );
 
 }
@@ -48,8 +51,29 @@ void Meat::addMeat( int x, int y )
     this->limitY = y;
 }
 
+void Meat::deleteMeat()
+{
+    scene()->removeItem( this );
+    meatscore->addMeatScore(5);
+}
+
 void Meat::meatmove()
 {
+    QList <QGraphicsItem *> collidingList = collidingItems();
+    for(size_t i{0}; i < collidingList.size(); ++i)
+    {
+        if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
+         {
+
+           // add score
+           meatscore->addMeatScore(1);
+
+           // delete
+           scene()->removeItem(this);
+           delete this;
+           return;
+        }
+    }
     setPos( x() , y() + 6);
     if( y() >= 700)
     {

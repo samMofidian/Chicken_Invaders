@@ -5,33 +5,36 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
 #include <QTimer>
+#include <MeatScore.h>
 
 class Meat : public QObject, public QGraphicsPixmapItem
 {
+
     Q_OBJECT
 
     friend class Bullet;
 
-public:
+    public:
 
-        Meat( QGraphicsScene * meatScene, QTimer * meattimer, int limitX, int limitY, QGraphicsItem * parent = 0 );
+        Meat( QGraphicsScene * meatScene, QTimer * meattimer, MeatScore * meatscore, int limitX, int limitY, QGraphicsItem * parent = 0 );
         Meat();
         void setX( int x );
         void setY( int y );
         void addMeat( int x, int y );
-        ~Meat();
+        void deleteMeat();
 
-private:
+    private:
 
         QGraphicsScene * meatScene;
         QTimer * meattimer;
         int limitX;
         int limitY;
         int numberOfMeats;
+        MeatScore * meatscore;
 
 signals:
 
-    public slots:
+public slots:
 
         void meatmove();
 
