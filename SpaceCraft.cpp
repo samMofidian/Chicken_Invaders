@@ -25,22 +25,22 @@ void SpaceCraft::keyPressEvent(QKeyEvent * event)
 {
     if (event->key() == Qt::Key_Left)
     {
-        setPos(x() - 25, y());
+        setPos(x() - 30, y());
         //qInfo() << "move left";
     }
     else if (event->key() == Qt::Key_Right)
     {
-        setPos(x() + 25, y());
+        setPos(x() + 30, y());
         //qInfo() << "move right";
     }
     else if (event->key() == Qt::Key_Up)
     {
-        setPos(x(), y() - 20);
+        setPos(x(), y() - 25);
         //qInfo() << "move up";
     }
     else if (event->key() == Qt::Key_Down)
     {
-        setPos(x(), y() + 20);
+        setPos(x(), y() + 25);
         //qInfo() << "move down";
     }
     else if (event->key() == Qt::Key_Space)
