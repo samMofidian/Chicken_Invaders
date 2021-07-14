@@ -25,6 +25,7 @@ SOURCES += \
     Level5Button.cpp \
     Level6Button.cpp \
     Life.cpp \
+    Meat.cpp \
     MeatScore.cpp \
     Menu.cpp \
     Next.cpp \
@@ -53,6 +54,7 @@ HEADERS += \
     Level5Button.h \
     Level6Button.h \
     Life.h \
+    Meat.h \
     MeatScore.h \
     Menu.h \
     Next.h \
