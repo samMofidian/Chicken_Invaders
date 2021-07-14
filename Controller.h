@@ -18,6 +18,7 @@
 #include <Superhen.h>
 #include <MeatScore.h>
 #include <Bullet.h>
+#include <Meat.h>
 
 class Controller : public QObject
 {

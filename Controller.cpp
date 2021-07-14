@@ -70,12 +70,6 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
         scene->addItem(meatscore);
         meatscore->setPos(140, 660);
     }
-    if( lvl >= 3 )
-    {
-        meatscore = new MeatScore();
-        scene->addItem(meatscore);
-        meatscore->setPos(140, 660);
-    }
     /* elham zahir */
 
 }
@@ -252,22 +246,46 @@ void Controller::addChick()
           }
     }
 
+//    if( lvl == 6 )
+//    {
+//        Superhen *** superhen = new Superhen**[9];
+//        for( int i = 0 ; i < 9 ; i ++ )
+//        {
+//            superhen[i] = new Superhen*[3];
+//            for( int j = 0 ; j < 3 ; j ++ )
+//            {
+//                superhen[i][j] = new Superhen{scene, holder,4 ,score, ctimer, 250 - 100 * j };
+//                int a = 120 * i + 90;
+//                superhen[i][j]->setPos( a , - 100 * j - 600 );
+//                if( superhen[i][j]->y() != 100 * j )
+//                {
+//                    superhen[i][j]->setPos( superhen[i][j]->x(), superhen[i][j]->y() + 6 );
+//                }
+//            }
+//         }
+//    }
+
     if( lvl == 6 )
     {
         Superhen *** superhen = new Superhen**[9];
+        //Meat *** meat = new Meat**[9];
         for( int i = 0 ; i < 9 ; i ++ )
         {
             superhen[i] = new Superhen*[3];
+            //meat[i] = new Meat*[3];
             for( int j = 0 ; j < 3 ; j ++ )
             {
-                superhen[i][j] = new Superhen{scene, holder,4 ,score, ctimer, 250 - 100 * j };
-                int a = 120 * i + 90;
+                superhen[i][j] = new Superhen{scene, holder,4 , score, ctimer, 250 - 100 * j };
+                int a = 120 * i + 120;
                 superhen[i][j]->setPos( a , - 100 * j - 600 );
-                if( superhen[i][j]->y() != 100 * j )
+                superhen[i][j]->superhenmove();
+                int x = superhen[i][j]->x();
+                int y = superhen[i][j]->y();
+                if( superhen[i][j]->exist() == true )
                 {
-                    superhen[i][j]->setPos( superhen[i][j]->x(), superhen[i][j]->y() + 6 );
+                       Meat * meat = new Meat{ scene, ctimer, meatscore, x, y, holder };
                 }
-            }
+             }
          }
     }
 

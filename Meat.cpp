@@ -1,3 +1,4 @@
+/* elham zahir */
 #include "Meat.h"
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
@@ -64,7 +65,6 @@ void Meat::meatmove()
     {
         if(typeid(*(collidingList)[i])==typeid (SpaceCraft))
          {
-
            // add score
            meatscore->addMeatScore(1);
 
@@ -74,6 +74,7 @@ void Meat::meatmove()
            return;
         }
     }
+
     setPos( x() , y() + 6);
     if( y() >= 700)
     {
@@ -82,3 +83,5 @@ void Meat::meatmove()
         delete this;
     }
 }
+
+/* elham zahir */
