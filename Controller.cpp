@@ -29,6 +29,29 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
     ctimer = new QTimer();
     ctimer->start(40);
 
+    // set win (start random level)
+    if( lvl == 2 )
+    {
+        Bullet::setNum(20);
+    }
+    if( lvl == 3 )
+    {
+        Bullet::setNum(56);
+    }
+    if( lvl == 4 )
+    {
+        Bullet::setNum(92);
+    }
+    if( lvl == 5 )
+    {
+        Bullet::setNum(152);
+    }
+    if( lvl == 6 )
+    {
+        Bullet::setNum(200);
+    }
+
+    /* elham zahir */
     // meat
     if( lvl >= 3 )
     {
@@ -36,6 +59,13 @@ Controller::Controller(int season, int lvl, QObject *parent) : QObject(parent)
         scene->addItem(meatscore);
         meatscore->setPos(140, 660);
     }
+    if( lvl >= 3 )
+    {
+        meatscore = new MeatScore();
+        scene->addItem(meatscore);
+        meatscore->setPos(140, 660);
+    }
+    /* elham zahir */
 
 }
 
@@ -215,18 +245,43 @@ void Controller::addChick()
 }
 /* elham zahir */
 
-/* elham zahir, sAm mofidian */
+/* sAm mofidian, elham zahir */
 bool Controller::checkWin()
 {
-    if( Bullet::numberOfChickens == 20 && lvl == 1 ){
+    // 20
+    if( Bullet::numberOfChickens == 20 && lvl == 1 )
+    {
         return true;
     }
-    else if( Bullet::numberOfChickens == 56 && lvl == 2 ){
+    // 20 + 36
+    else if( Bullet::numberOfChickens == 56 && lvl == 2 )
+    {
         return true;
     }
+    // 20 + 36 + 36
+    else if( Bullet::numberOfChickens == 92 && lvl == 3 )
+    {
+        return true;
+    }
+    // 20 + 36 + 36 + 60
+    else if( Bullet::numberOfChickens == 152 && lvl == 4 )
+    {
+        return true;
+    }
+    // 20 + 36 + 36 + 60 + 48
+    else if( Bullet::numberOfChickens == 200 && lvl == 5 )
+    {
+        return true;
+    }
+    // 20 + 36 + 36 + 60 + 48 + 108
+    else if( Bullet::numberOfChickens == 308 && lvl == 6 )
+    {
+        return true;
+    }
+
     return false;
 }
-/* elham zahir, sAm mofidian */
+/* sAm mofidian, elham zahir */
 
 Controller::~Controller()
 {

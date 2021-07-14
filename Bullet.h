@@ -22,8 +22,10 @@ public:
     explicit Bullet(QGraphicsItem * parent = nullptr);
     Bullet(int t);
     void chickSound();
-    void setNum(int n);
+    static void setNum(int n);
+    /* elham zahir */
     static int numberOfChickens;
+    /* elham zahir */
 
 signals:
 
